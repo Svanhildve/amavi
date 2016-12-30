@@ -1,1 +1,3 @@
-# amavi
+# Amavi
+
+Amavi blog
