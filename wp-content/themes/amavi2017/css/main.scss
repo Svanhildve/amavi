@@ -1,0 +1,30 @@
+/*
+Theme Name: Avami 2017
+Theme URI: avami
+Author: Svanhild Egge
+Author URI: www.svanhildve.no
+Description: bla bla
+Version: 1.0
+License: open source
+License URI: 
+
+*/
+
+
+/* base styles */
+
+@import 'grid';
+@import 'normalise';
+@import 'colours';
+@import 'typography';
+@import 'functions';
+@import 'base';
+
+/* base components */
+
+@import 'footer';
+
+/* layout compontents */
+
+@import 'single';
+
