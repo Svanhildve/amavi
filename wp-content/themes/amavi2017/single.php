@@ -12,7 +12,7 @@
 
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-				<div class="single-post__meta col-s-12 col-m-8">
+				<div class="meta col-s-12 col-ml-8 col-ml-offset-2">
 					
 					<div class="meta__date">
 
@@ -22,19 +22,19 @@
 					
 					<div class="meta__category">
 
-						<?php the_category(); ?> / 
+						<?php the_category(); ?>
 
 					</div>
 
 					<div class="meta__author">
 
-						<?php the_author(); ?> 
+						/ <?php the_author(); ?> 
 
 					</div>
 
 				</div>
 
-				<div class="single-post__intro col-s-12 col-m-8">
+				<div class="single-post__intro col-s-12 col-ml-8 col-ml-offset-2">
 					
 					<h1><?php single_post_title( '' ); ?></h1>
 					<p class="lede">Silicon Valley business strategist Jenny Blake puts forward a pretty convincing case as to why.</p>

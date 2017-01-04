@@ -1,5 +1,28 @@
+/* variables */
+
+$body-copy:		'FranklinGothic URW', Helvetica, Sans-serif;
+$display-type:	'Sofia pro', Futura, "Gill Sans", Sans-serif;
+
 html {
-	font-family: "Helvetica";
+	font-family: $body-copy;
 	font-size: 18px;
+	line-height: 28px;
+	color: $black;
 }
 
+blockquote {
+	font-family: $display-type;
+	font-size: calc-rem(34);
+	line-height: calc-rem(42);
+	font-weight: bold;
+}
+
+p {
+	margin-bottom: calc-rem(16);
+}
+
+.lede {
+	font-family: $display-type;
+	font-size: calc-rem(24);
+	line-height: calc-rem(32);
+}

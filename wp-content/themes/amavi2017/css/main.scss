@@ -15,16 +15,22 @@ License URI:
 
 @import 'grid';
 @import 'normalise';
+@import 'functions';
 @import 'colours';
 @import 'typography';
-@import 'functions';
+
 @import 'base';
+@import 'headlines';
 
 /* base components */
 
+@import 'header';
 @import 'footer';
 
 /* layout compontents */
 
 @import 'single';
 
+/* components */
+
+@import 'meta';

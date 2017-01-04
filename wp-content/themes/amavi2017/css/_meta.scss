@@ -1,0 +1,26 @@
+.meta {
+	font-size: calc-rem(14);
+	font-family: $display-type;
+}
+
+.meta__date, .meta__category, .meta__author {
+	float: left;
+}
+
+.meta__date {
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 2px;
+		width: calc-rem(20);
+		background-color: #000;
+		vertical-align: middle;
+		position: relative;
+		margin-right: calc-rem(5);
+	}
+}
+
+.meta__date {
+	text-transform: uppercase;
+	font-weight: bold;
+}

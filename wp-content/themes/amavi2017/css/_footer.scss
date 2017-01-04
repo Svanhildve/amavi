@@ -1,6 +1,8 @@
 .footer {
 	background-color: $blue-zodiac;
 	font-size: calc-rem(16);
+	font-family: $display-type;
+	line-height: calc-rem(24);
 }
 
 .footer__content {

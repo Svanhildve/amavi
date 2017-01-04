@@ -1,0 +1,149 @@
+.header {
+	//padding: calc-rem(15);
+	//line-height: 0;
+}
+
+.header__search {
+	display: none;
+	text-align: right;
+
+		@media #{$breakpoint-tablet} {
+		display: inline;
+		float: right;
+	}
+}
+
+.header__nav__list {
+	display: none;
+
+	@media #{$breakpoint-tablet} {
+		display: inline;
+		text-align: center;
+	}
+}
+
+
+.hamburger {
+	float: right;
+	position: relative;
+	z-index: 10;
+
+	@media #{$breakpoint-tablet} {
+		display: none;
+	}
+}
+
+.show-nav {
+
+	.header__nav {
+
+		&:after {
+			content: '';
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			text-align: center;
+			background: pink;
+			opacity: 0.8;
+			z-index: 1;
+		}
+
+		li {
+			display: block;
+		}
+	}
+
+	.header__nav__list {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	    text-align: center;
+	    z-index: 10;
+	}
+
+	.hamburger__line {
+
+		transition: background .2s .1s ease;
+		background: transparent;
+
+		&:before, &:after {
+			transition: top .3s ease, transform .2s .2s ease;
+			top: 0;
+			width: 22px;
+		}
+
+		&:before {
+			-webkit-transform: rotate3d(0,0,1,45deg);
+			-ms-transform: rotate3d(0,0,1,45deg);
+			transform: rotate3d(0,0,1,45deg);
+		}
+
+		&:after {
+			-webkit-transform: rotate3d(0,0,1,-45deg);
+			-ms-transform: rotate3d(0,0,1,-45deg);
+			transform: rotate3d(0,0,1,-45deg);
+		}
+
+	}
+
+}
+
+.hamburger__line {
+	position: relative;
+	display: inline-block;
+	width: 22px;
+	height: 2px;	
+	background: $black;
+	
+
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		display: inline-block;
+		width: 22px;
+		height: 2px;
+		background: $black;
+		transform-origin: 50% 50%;
+	}
+
+	&:before {
+		top: 6px;
+	}
+
+	&:after {
+		top: -6px;
+	}
+}
+
+/*
+
+.hamburger-link {
+	display: block;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+    top: 1px;
+    left: 0;
+    z-index: 9020;
+
+    &.active {
+    	left: 270px;
+    	-webkit-transition: 0.15s ease;
+	    -moz-transition: 0.15s ease;
+	    -o-transition: 0.15s ease;
+	    transition: 0.15s ease;
+    }
+
+    @media #{$breakpoint-medium} {
+    	display: none;
+    }
+}
+
+
+.active 
+
+*/

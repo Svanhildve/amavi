@@ -15,7 +15,29 @@
 
 
 	<!-- må erstatte faviconet -->
-	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png" type="image/png">	
+	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png" type="image/png">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
+
+	<script>
+
+		// Wait for the DOM to be ready (all elements printed on page regardless if loaded or not)
+		$(function() {
+
+		    // Bind a click event to anything with the class "hamburger"
+		    $('.hamburger').click(function() {
+		        
+		          // Toggle the Body Class "show-nav"
+		          $('body').toggleClass(.'show-nav');
+
+		          // Deactivate the default behavior of going to the next page on click 
+		          return false;
+
+		    });
+		});
+
+
+	</script>
 
 <?php wp_head(); ?>
 
@@ -29,21 +51,31 @@
 
 	<div class="row header">
 
-		<div class="header__logo">
-			Logo
+		<div class="header__logo col-s-6 col-ml-3">
+			Amavi Journal
 		</div>
 
-		<nav class="header__nav">
+		<nav class="header__nav col-s-6 col-ml-6">
 
-			<ul>
+			<div class="hamburger">
 
-				<?php wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
+				<div class="hamburger__line"></div>
 
-			</ul>
+			</div>
+
+			<div class="header__nav__list">
+
+				<ul>
+
+					<?php wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
+
+				</ul>
+
+			</div>
 
 		</nav>
 
-		<div class="header__search">
+		<div class="header__search col-ml-3">
 			Search
 		</div>
 

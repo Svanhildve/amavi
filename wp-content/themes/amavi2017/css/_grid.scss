@@ -7,6 +7,7 @@ $grid-gutter:			10px;
 $breakpoint-small:		"only screen and (max-width: 480px)";
 $breakpoint-palm:		"only screen and (min-width: 480px)";
 $breakpoint-medium: 	"only screen and (min-width: 768px)";
+$breakpoint-tablet:		"only screen and (min-width: 1024px)";
 $breakpoint-large: 		"only screen and (min-width: 1170px)";
 
 
@@ -43,6 +44,10 @@ $breakpoint-large: 		"only screen and (min-width: 1170px)";
 		width: 100% / $col-number * $i;
 	}
 
+	.col-s-offset-#{$i} {
+		margin-left: 100% / $col-number * $i;
+	}
+
 }
 
 @media #{$breakpoint-palm} {
@@ -51,6 +56,10 @@ $breakpoint-large: 		"only screen and (min-width: 1170px)";
 		
 		.col-pm-#{$i} {
 			width: 100% / $col-number * $i;
+		}
+
+		.col-pm-offset-#{$i} {
+			margin-left: 100% / $col-number * $i;
 		}
 
 	}
@@ -65,6 +74,26 @@ $breakpoint-large: 		"only screen and (min-width: 1170px)";
 			width: 100% / $col-number * $i;
 		}
 
+		.col-m-offset-#{$i} {
+			margin-left: 100% / $col-number * $i;
+		}
+
+	}
+	 
+}
+
+@media #{$breakpoint-tablet} {
+ 
+	@for $i from 1 through 12 {
+		
+		.col-ml-#{$i} {
+			width: 100% / $col-number * $i;
+		}
+
+		.col-ml-offset-#{$i} {
+			margin-left: 100% / $col-number * $i;
+		}
+
 	}
 	 
 }
@@ -75,6 +104,10 @@ $breakpoint-large: 		"only screen and (min-width: 1170px)";
 		
 		.col-l-#{$i} {
 			width: 100% / $col-number * $i;
+		}
+
+		.col-l-offset-#{$i} {
+			margin-left: 100% / $col-number * $i;
 		}
 
 	}
