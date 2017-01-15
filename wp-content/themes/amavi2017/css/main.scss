@@ -21,6 +21,7 @@ License URI:
 
 @import 'base';
 @import 'headlines';
+@import 'links';
 
 /* base components */
 
@@ -30,7 +31,9 @@ License URI:
 /* layout compontents */
 
 @import 'single';
+@import 'category';
 
 /* components */
 
 @import 'meta';
+@import 'article-listing';

@@ -3,6 +3,12 @@
 	font-size: calc-rem(16);
 	font-family: $display-type;
 	line-height: calc-rem(24);
+
+	a, a visited {
+		color: $white;
+		box-shadow: inset 0 -0.06em 0 0 $blue-zodiac, inset 0 -0.1em 0 0 currentColor;
+		text-shadow: 0.04em 0 $blue-zodiac, -0.04em 0 $blue-zodiac, 1.5px 0 $blue-zodiac, -1.5px 0 $blue-zodiac;
+	}
 }
 
 .footer__content {

@@ -1,35 +1,56 @@
 <?php get_header(); ?>
 		
-		<section id="content">
+		<div class="category-page">
 			
-			<div id="blogposts_headline">
-				<h1>Where I ramble about design</h1>
+			<div class="category-page__heading row wrapper">
+			
+				<div class="category-page-label">Category</div>
+				<h1 class="h1 h1--category"><?php single_cat_title(); ?></h1>
+
 			</div>
-			
-			<article id="blogposts2">
+
+			<div class="article-listing row wrapper">
 			
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<article>
-						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-						
-						<div class="date"><?php echo get_the_date('d/m/Y'); ?></div><div class="comment"><?php comments_popup_link( 'no comments', 'one comment', '% comments' ); ?></div>
-						
-						<div class="entry">
-							<?php the_excerpt(); ?>
-							<a href="<?php echo get_permalink(); ?>"> Read More...</a>
+
+					<div class="article-listing__item">
+
+						<div class="article-listing__thumbnail col-s-12 col-l-3" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')">
 						</div>
-					</article>
-				
+						
+						<div class="meta col-s-12 col-l-9">
+					
+							<div class="meta__date">
+
+								<?php echo get_the_date(); ?> / 
+									
+							</div>
+							
+							<div class="meta__category">
+
+								<?php the_category(); ?>
+
+							</div>
+
+						</div>
+						
+						<div class="article-listing__teaser col-s-12 col-l-9">
+
+							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+
+							<?php the_excerpt(); ?>
+
+						</div>		
+
+					</div>
+
 
 				<?php endwhile; else: ?>
 				<p><?php _e('Sorry, no content! :( '); ?></p>
 				<?php endif; ?>
-			
-			</article>
 
-			<?php get_sidebar(); ?>
+			</div>
+
 			
-			<br class="clear" />
-			
-		</section>
+		</div>
 <?php get_footer(); ?>

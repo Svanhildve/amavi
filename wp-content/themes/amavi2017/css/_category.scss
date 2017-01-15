@@ -1,0 +1,14 @@
+.category-page {
+	padding-top: calc-rem(20);
+}
+
+.category-page__heading {
+	text-align: center;
+	border-bottom: 1px solid $lightest-grey;
+}
+
+.category-page-label {
+	font-family: $display-type;
+	font-size: calc-rem(15);
+	padding-bottom: calc-rem(5);
+}

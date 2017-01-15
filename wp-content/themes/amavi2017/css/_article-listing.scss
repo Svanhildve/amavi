@@ -1,0 +1,16 @@
+.article-listing__thumbnail {
+	display: block;
+	//width: calc-rem(350);
+	//height: calc-rem(200);
+	background-position: 50% 50%;
+	background-size: cover;
+	height: 400px;
+	//float: left;
+	//margin-right: calc-rem(20);
+}
+
+.article-listing__teaser {
+	font-family: $display-type;
+	font-size: calc-rem(16);
+	line-height: calc-rem(24);
+}

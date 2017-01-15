@@ -1,10 +1,12 @@
 .meta {
 	font-size: calc-rem(14);
 	font-family: $display-type;
+	margin-bottom: calc-rem(5);
 }
 
 .meta__date, .meta__category, .meta__author {
-	float: left;
+	//float: left;
+	display: inline-block;
 }
 
 .meta__date {
@@ -23,4 +25,10 @@
 .meta__date {
 	text-transform: uppercase;
 	font-weight: bold;
+}
+
+.category-page {
+	.meta {
+		margin-bottom: calc-rem(10);
+	}
 }

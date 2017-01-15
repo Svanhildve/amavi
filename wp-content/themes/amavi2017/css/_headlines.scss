@@ -7,3 +7,16 @@ h1, .h1 {
 	line-height: calc-rem(70);
 	margin-bottom: calc-rem(30);
 }
+
+.h1--category {
+	font-size: calc-rem(45);
+	line-height: calc-rem(45);
+	text-transform: uppercase;
+	font-weight: 900;
+}
+
+h2, .h2 {
+	font-size: calc-rem(26);
+	line-height: calc-rem(26);
+	margin-bottom: calc-rem(20);
+}

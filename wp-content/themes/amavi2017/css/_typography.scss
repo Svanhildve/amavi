@@ -10,11 +10,12 @@ html {
 	color: $black;
 }
 
-blockquote {
+blockquote, .blockquote {
 	font-family: $display-type;
 	font-size: calc-rem(34);
 	line-height: calc-rem(42);
 	font-weight: bold;
+	color: $teal;
 }
 
 p {
