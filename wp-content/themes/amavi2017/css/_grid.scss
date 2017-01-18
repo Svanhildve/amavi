@@ -1,14 +1,14 @@
 /* Variables */
 
-$col-number:			12;
-$grid-width:			100%;
-$grid-gutter:			10px;
+$col-number:				12;
+$grid-width:				100%;
+$grid-gutter:				10px;
 
-$breakpoint-small:		"only screen and (max-width: 480px)";
-$breakpoint-palm:		"only screen and (min-width: 480px)";
-$breakpoint-medium: 	"only screen and (min-width: 768px)";
-$breakpoint-tablet:		"only screen and (min-width: 1024px)";
-$breakpoint-large: 		"only screen and (min-width: 1170px)";
+$breakpoint-sm:			"only screen and (max-width: 480px)";
+$breakpoint-palm:			"only screen and (min-width: 480px)";
+$breakpoint-md: 		"only screen and (min-width: 768px)";
+$breakpoint-ml:			"only screen and (min-width: 1024px)";
+$breakpoint-lg: 		"only screen and (min-width: 1170px)";
 
 
 /* Grid */
@@ -66,7 +66,7 @@ $breakpoint-large: 		"only screen and (min-width: 1170px)";
 	 
 }
 
-@media #{$breakpoint-medium} {
+@media #{$breakpoint-md} {
  
 	@for $i from 1 through 12 {
 		
@@ -82,7 +82,7 @@ $breakpoint-large: 		"only screen and (min-width: 1170px)";
 	 
 }
 
-@media #{$breakpoint-tablet} {
+@media #{$breakpoint-ml} {
  
 	@for $i from 1 through 12 {
 		
@@ -98,7 +98,7 @@ $breakpoint-large: 		"only screen and (min-width: 1170px)";
 	 
 }
 
-@media #{$breakpoint-large} {
+@media #{$breakpoint-lg} {
  
 	@for $i from 1 through 12 {
 		

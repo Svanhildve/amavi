@@ -422,29 +422,49 @@ html {
 
 blockquote, .blockquote {
   font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;
-  font-size: 1.88889rem;
-  line-height: 2.33333rem;
+  font-size: 1.44444rem;
+  line-height: 1.88889rem;
   font-weight: bold;
-  color: #3DA499; }
+  color: #7FDEDD; }
+  @media only screen and (min-width: 768px) {
+    blockquote, .blockquote {
+      font-size: 1.88889rem;
+      line-height: 2.33333rem; } }
 
 p {
   margin-bottom: 0.88889rem; }
 
 .lede {
   font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;
-  font-size: 1.33333rem;
-  line-height: 1.77778rem; }
+  font-size: 1.22222rem;
+  line-height: 1.66667rem; }
+  @media only screen and (min-width: 768px) {
+    .lede {
+      font-size: 1.33333rem;
+      line-height: 1.77778rem; } }
+
+.excerpt {
+  font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;
+  font-size: 0.88889rem;
+  line-height: 1.44444rem; }
 
 body {
+  padding: 15px;
   box-sizing: border-box; }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif; }
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;
+  font-weight: bold; }
 
 h1, .h1 {
-  font-size: 3.88889rem;
-  line-height: 3.88889rem;
+  font-size: 2.22222rem;
+  line-height: 2.5rem;
   margin-bottom: 1.66667rem; }
+  @media only screen and (min-width: 768px) {
+    h1, .h1 {
+      font-size: 3.88889rem;
+      line-height: 4.16667rem;
+      margin-bottom: 1.66667rem; } }
 
 .h1--category {
   font-size: 2.5rem;
@@ -452,10 +472,56 @@ h1, .h1 {
   text-transform: uppercase;
   font-weight: 900; }
 
+.h1--featured {
+  font-size: 3.05556rem;
+  line-height: 3.05556rem;
+  text-transform: uppercase;
+  font-weight: 900; }
+
 h2, .h2 {
   font-size: 1.44444rem;
+  line-height: 1.66667rem;
+  margin-bottom: 0.83333rem;
+  margin-top: 1.94444rem; }
+  @media only screen and (min-width: 768px) {
+    h2, .h2 {
+      font-size: 1.55556rem;
+      line-height: 1.77778rem; } }
+
+.h2--listing {
+  margin-top: 0; }
+
+h3, .h3 {
+  font-size: 1.22222rem;
+  line-height: 1.55556rem;
+  margin-bottom: 0.55556rem;
+  margin-top: 1.66667rem; }
+  @media only screen and (min-width: 768px) {
+    h3, .h3 {
+      font-size: 1.33333rem;
+      line-height: 1.55556rem; } }
+
+.h3--listing {
+  margin-top: 0; }
+
+h4, .h4 {
+  font-size: 1rem;
   line-height: 1.44444rem;
-  margin-bottom: 1.11111rem; }
+  margin-bottom: 0.27778rem;
+  margin-top: 1.38889rem; }
+  @media only screen and (min-width: 768px) {
+    h4, .h4 {
+      font-size: 1.11111rem;
+      line-height: 1.44444rem; } }
+
+.h4--listing {
+  margin-top: 0; }
+
+h5, .h5 {
+  font-size: 0.88889rem;
+  line-height: 1.33333rem;
+  margin-bottom: 0.27778rem;
+  margin-top: 1.38889rem; }
 
 a, a:visited {
   text-decoration: none;
@@ -465,6 +531,23 @@ a, a:visited {
 
 a:hover, a:active {
   color: #3DA499; }
+
+h2 a, h2 a:visited {
+  text-shadow: none;
+  box-shadow: inset 0 -0.01px 0 0 #fff, inset 0 -3px 0 0 #EBEBEB; }
+h2 a:hover, h2 a:active {
+  text-shadow: none;
+  box-shadow: inset 0 -0.01px 0 0 #fff, inset 0 -12px 0 0 #7FDEDD;
+  color: #444444; }
+
+h1 a, h1 a:visited {
+  text-shadow: none;
+  box-shadow: none; }
+
+.cta-link {
+  font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;
+  font-size: 0.77778rem;
+  font-weight: 900; }
 
 /* base components */
 .header {
@@ -609,16 +692,23 @@ a:hover, a:active {
     color: #ffffff;
     box-shadow: inset 0 -0.06em 0 0 #3C4257, inset 0 -0.1em 0 0 currentColor;
     text-shadow: 0.04em 0 #3C4257, -0.04em 0 #3C4257, 1.5px 0 #3C4257, -1.5px 0 #3C4257; }
+  .footer p {
+    margin: 0; }
 
 .footer__content {
-  color: #ffffff; }
+  color: #ffffff;
+  padding: 3.33333rem 0; }
 
 /* layout compontents */
 .single-post__hero-image {
-  padding-bottom: 35%;
+  padding-bottom: 50%;
   display: block;
   background-position: 50% 50%;
-  background-size: cover; }
+  background-size: cover;
+  margin-bottom: 1.11111rem; }
+  @media only screen and (min-width: 768px) {
+    .single-post__hero-image {
+      padding-bottom: 35%; } }
 
 .category-page {
   padding-top: 1.11111rem; }
@@ -632,6 +722,12 @@ a:hover, a:active {
   font-size: 0.83333rem;
   padding-bottom: 0.27778rem; }
 
+.category-page--empty {
+  font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;
+  font-size: 0.88889rem;
+  line-height: 1.44444rem;
+  text-align: center; }
+
 /* components */
 .meta {
   font-size: 0.77778rem;
@@ -641,7 +737,14 @@ a:hover, a:active {
 .meta__date, .meta__category, .meta__author {
   display: inline-block; }
 
-.meta__date:before {
+.meta__date {
+  text-transform: uppercase;
+  font-weight: bold; }
+
+.category-page .meta {
+  margin-bottom: 0.83333rem; }
+
+.single-post .meta__date:before {
   content: '';
   display: inline-block;
   height: 2px;
@@ -651,22 +754,55 @@ a:hover, a:active {
   position: relative;
   margin-right: 0.27778rem; }
 
-.meta__date {
-  text-transform: uppercase;
-  font-weight: bold; }
-
-.category-page .meta {
-  margin-bottom: 0.55556rem; }
-
 .article-listing__thumbnail {
+  display: block; }
+
+.article-listing__thumbnail-image {
+  padding-bottom: 55%;
   display: block;
   background-position: 50% 50%;
-  background-size: cover;
-  height: 400px; }
+  background-size: cover; }
 
-.article-listing__teaser {
+/*.article-listing__teaser {
+	font-family: $display-type;
+	font-size: calc-rem(16);
+	line-height: calc-rem(26);
+}*/
+.article-listing {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem; }
+
+.article-listing__item {
+  padding-bottom: 0.55556rem; }
+
+/* 
+	&:hover {
+		
+			transform: scale(1.1);
+			transition: all 0.2s;
+
+	}*/
+.featured-hero__thumbnail-image {
+  padding-bottom: 65%;
+  display: block;
+  background-position: 50% 50%;
+  background-size: cover; }
+
+.featured-hero__teaser {
+  position: absolute;
+  width: 40%;
+  margin-left: 25px; }
+
+.more-articles__link {
+  font-size: 2.77778rem;
   font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;
-  font-size: 0.88889rem;
-  line-height: 1.33333rem; }
+  font-weight: 900; }
+  .more-articles__link a:link {
+    text-shadow: none;
+    box-shadow: inset 0 -0.01px 0 0 #fff, inset 0 -25px 0 0 #7FDEDD; }
+
+.more-articles {
+  text-align: center;
+  padding: 7.22222rem 0; }
 
 /*# sourceMappingURL=style.css.map */

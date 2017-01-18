@@ -9,36 +9,38 @@
 
 			</div>
 
-			<div class="article-listing row wrapper">
+			<div class="article-listing">
 			
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-					<div class="article-listing__item">
+					<div class="article-listing__item row wrapper">
 
-						<div class="article-listing__thumbnail col-s-12 col-l-3" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')">
+						<div class="article-listing__thumbnail col-s-12 col-m-5 col-l-4">
+							<a href="<?php the_permalink(); ?>"><div class="article-listing__thumbnail-image" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')">
+							</div></a>
 						</div>
 						
-						<div class="meta col-s-12 col-l-9">
-					
-							<div class="meta__date">
+						<div class="article-listing__teaser col-s-12 col-m-7 col-l-8">
 
-								<?php echo get_the_date(); ?> / 
-									
-							</div>
-							
-							<div class="meta__category">
-
-								<?php the_category(); ?>
-
-							</div>
-
-						</div>
+							<div class="meta">
 						
-						<div class="article-listing__teaser col-s-12 col-l-9">
+								<div class="meta__date">
 
-							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+									<?php echo get_the_date(); ?> / 
+										
+								</div>
+								
+								<div class="meta__category">
 
-							<?php the_excerpt(); ?>
+									<?php the_category(); ?>
+
+								</div>
+
+							</div>
+
+							<h2 class="h2 h2--listing"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+
+							<div class="excerpt"><?php the_excerpt(); ?></div>
 
 						</div>		
 
@@ -46,7 +48,13 @@
 
 
 				<?php endwhile; else: ?>
-				<p><?php _e('Sorry, no content! :( '); ?></p>
+				
+				<div class="row wrapper category-page--empty">
+					<div class="col-s-12">
+						<p><?php _e('There are no posts in this category'); ?></p>
+					</div>
+				</div>
+				
 				<?php endif; ?>
 
 			</div>

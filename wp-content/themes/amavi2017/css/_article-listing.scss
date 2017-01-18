@@ -1,16 +1,35 @@
 .article-listing__thumbnail {
 	display: block;
-	//width: calc-rem(350);
-	//height: calc-rem(200);
-	background-position: 50% 50%;
-	background-size: cover;
-	height: 400px;
-	//float: left;
-	//margin-right: calc-rem(20);
 }
 
-.article-listing__teaser {
+.article-listing__thumbnail-image {
+	padding-bottom: 55%;
+	display: block;
+	background-position: 50% 50%;
+	background-size: cover;
+
+}
+
+/*.article-listing__teaser {
 	font-family: $display-type;
 	font-size: calc-rem(16);
-	line-height: calc-rem(24);
+	line-height: calc-rem(26);
+}*/
+
+.article-listing {
+	margin-top: calc-rem(45);
+	margin-bottom: calc-rem(45);
 }
+
+.article-listing__item {
+	padding-bottom: calc-rem(10);
+}
+
+
+/* 
+	&:hover {
+		
+			transform: scale(1.1);
+			transition: all 0.2s;
+
+	}*/

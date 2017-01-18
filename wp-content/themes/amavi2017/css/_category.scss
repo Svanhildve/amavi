@@ -12,3 +12,10 @@
 	font-size: calc-rem(15);
 	padding-bottom: calc-rem(5);
 }
+
+.category-page--empty {
+	font-family: $display-type;
+	font-size: calc-rem(16);
+	line-height: calc-rem(26);
+	text-align: center;
+}

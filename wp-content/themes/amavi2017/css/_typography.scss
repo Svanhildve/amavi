@@ -12,10 +12,15 @@ html {
 
 blockquote, .blockquote {
 	font-family: $display-type;
-	font-size: calc-rem(34);
-	line-height: calc-rem(42);
+	font-size: calc-rem(26);
+	line-height: calc-rem(34);
 	font-weight: bold;
-	color: $teal;
+	color: $light-teal;
+
+	@media #{$breakpoint-md} {
+		font-size: calc-rem(34);
+		line-height: calc-rem(42);
+	}
 }
 
 p {
@@ -24,6 +29,17 @@ p {
 
 .lede {
 	font-family: $display-type;
-	font-size: calc-rem(24);
-	line-height: calc-rem(32);
+	font-size: calc-rem(22);
+	line-height: calc-rem(30);
+
+	@media #{$breakpoint-md} {
+		font-size: calc-rem(24);
+		line-height: calc-rem(32);
+	}
+}
+
+.excerpt {
+	font-family: $display-type;
+	font-size: calc-rem(16);
+	line-height: calc-rem(26);
 }

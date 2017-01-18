@@ -10,25 +10,27 @@
 }
 
 .meta__date {
-	&:before {
-		content: '';
-		display: inline-block;
-		height: 2px;
-		width: calc-rem(20);
-		background-color: #000;
-		vertical-align: middle;
-		position: relative;
-		margin-right: calc-rem(5);
-	}
-}
-
-.meta__date {
 	text-transform: uppercase;
 	font-weight: bold;
 }
 
 .category-page {
 	.meta {
-		margin-bottom: calc-rem(10);
+		margin-bottom: calc-rem(15);
+	}
+}
+
+.single-post {
+	.meta__date {
+		&:before {
+			content: '';
+			display: inline-block;
+			height: 2px;
+			width: calc-rem(20);
+			background-color: #000;
+			vertical-align: middle;
+			position: relative;
+			margin-right: calc-rem(5);
+		}
 	}
 }

@@ -1,6 +1,11 @@
 .single-post__hero-image {
-	padding-bottom: 35%;
+	padding-bottom: 50%;
 	display: block;
 	background-position: 50% 50%;
 	background-size: cover;
+	margin-bottom: calc-rem(20);
+
+	@media #{$breakpoint-md} {
+		padding-bottom: 35%;
+	}
 }

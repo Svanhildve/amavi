@@ -1,11 +1,18 @@
-h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	font-family: $display-type;
+	font-weight: bold;
 }
 
 h1, .h1 {
-	font-size: calc-rem(70);
-	line-height: calc-rem(70);
+	font-size: calc-rem(40);
+	line-height: calc-rem(45);
 	margin-bottom: calc-rem(30);
+
+	@media #{$breakpoint-md} {
+		font-size: calc-rem(70);
+		line-height: calc-rem(75);
+		margin-bottom: calc-rem(30);
+	}
 }
 
 .h1--category {
@@ -15,8 +22,64 @@ h1, .h1 {
 	font-weight: 900;
 }
 
+.h1--featured {
+	font-size: calc-rem(55);
+	line-height: calc-rem(55);
+	text-transform: uppercase;
+	font-weight: 900;
+}
+
 h2, .h2 {
 	font-size: calc-rem(26);
+	line-height: calc-rem(30);
+	margin-bottom: calc-rem(15);
+	margin-top: calc-rem(35);
+
+	@media #{$breakpoint-md} {
+		font-size: calc-rem(28);
+		line-height: calc-rem(32);
+	}
+}
+
+.h2--listing {
+	margin-top: 0;
+}
+
+h3, .h3 {
+	font-size: calc-rem(22);
+	line-height: calc-rem(28);
+	margin-bottom: calc-rem(10);
+	margin-top: calc-rem(30);
+
+	@media #{$breakpoint-md} {
+		font-size: calc-rem(24);
+		line-height: calc-rem(28);
+	}
+}
+
+.h3--listing {
+	margin-top: 0;
+}
+
+h4, .h4 {
+	font-size: calc-rem(18);
 	line-height: calc-rem(26);
-	margin-bottom: calc-rem(20);
+	margin-bottom: calc-rem(5);
+	margin-top: calc-rem(25);
+
+	@media #{$breakpoint-md} {
+		font-size: calc-rem(20);
+		line-height: calc-rem(26);
+	}
+}
+
+.h4--listing {
+	margin-top: 0;
+}
+
+h5, .h5 {
+	font-size: calc-rem(16);
+	line-height: calc-rem(24);
+	margin-bottom: calc-rem(5);
+	margin-top: calc-rem(25);
 }

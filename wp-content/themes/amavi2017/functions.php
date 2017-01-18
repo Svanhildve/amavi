@@ -26,8 +26,8 @@ function custom_post_portfolio() {
     	'public' 		=> true,
     	'label'  		=> 'Portfolio Items',
     	'supports'		=> array('title', 'editor', 'thumbnail', 'excerpt', 'page-attributes'),
-		'has_archive'	=> false,
-		'rewrite'		=> array( 
+	 	   'has_archive'	=> false,
+		  'rewrite'		=> array( 
 			'slug' 			=> 'portfolio',
 			'with_front' 	=> '1',
 			'capability_type'     => 'page'
@@ -37,4 +37,15 @@ function custom_post_portfolio() {
 }
 
 add_action( 'init', 'custom_post_portfolio' );
+
+
+
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 40;
+}
+
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
 ?>
