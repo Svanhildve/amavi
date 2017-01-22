@@ -22,13 +22,6 @@ h1, .h1 {
 	font-weight: 900;
 }
 
-.h1--featured {
-	font-size: calc-rem(55);
-	line-height: calc-rem(55);
-	text-transform: uppercase;
-	font-weight: 900;
-}
-
 h2, .h2 {
 	font-size: calc-rem(26);
 	line-height: calc-rem(30);
@@ -38,6 +31,18 @@ h2, .h2 {
 	@media #{$breakpoint-md} {
 		font-size: calc-rem(28);
 		line-height: calc-rem(32);
+	}
+}
+
+.h2--featured {
+	font-size: calc-rem(35);
+	line-height: calc-rem(35);
+	text-transform: uppercase;
+	font-weight: 900;
+
+	@media #{$breakpoint-md} {
+		font-size: calc-rem(55);
+		line-height: calc-rem(55);
 	}
 }
 

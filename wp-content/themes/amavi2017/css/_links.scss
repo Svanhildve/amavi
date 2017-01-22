@@ -9,22 +9,6 @@ a:hover, a:active {
 	color: $teal;
 }
 
-h2 {
-
-	a, a:visited {
-		text-shadow: none;
-		box-shadow: inset 0 -0.01px 0 0 #fff, inset 0 -3px 0 0 $lightest-grey;
-	}
-
-	a:hover, a:active {
-		text-shadow: none;
-		box-shadow: inset 0 -0.01px 0 0 #fff, inset 0 -12px 0 0 $light-teal;
-		color: $black;
-		//transition: 0.2s;
-	}
-
-}
-
 h1 {
 	a, a:visited {
 		text-shadow: none;
@@ -36,4 +20,9 @@ h1 {
 	font-family: $display-type;
 	font-size: calc-rem(14);
 	font-weight: 900;
+}
+
+h2 a {
+	box-shadow: none;
+	text-shadow: none;
 }

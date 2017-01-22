@@ -1,4 +1,12 @@
 body {
-	padding: 15px;
+	//border: 10px solid #87D8D7;
 	box-sizing: border-box;
+}
+
+.inner-page {
+	position: relative;
+	margin-bottom: 244px;
+	z-index: 2;
+	background: $white;
+	//padding: 0 20px;
 }
