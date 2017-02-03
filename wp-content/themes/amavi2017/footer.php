@@ -7,6 +7,7 @@
 			<div class="col-s-12 col-m-5 footer__about">
 				<span class="h5">Avami Journal</span>
 				<p>This website is a blog made by and for young creative professionals. Quisque eget mauris ut orci semper ornare. Maecenas et cursus tellus, quis ultrices turpis. Vivamus aliquam arcu vitae ligula convallis, ullamcorper vestibulum nisl varius.</p>
+				<a class="button">Search</a>
 			</div>
 
 			<div class="col-s-12 col-m-3 col-m-offset-1 footer__nav">

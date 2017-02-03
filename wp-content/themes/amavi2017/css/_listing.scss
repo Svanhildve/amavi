@@ -1,0 +1,33 @@
+.listing__thumbnail {
+	display: block;
+	overflow:hidden;
+}
+
+.listing__thumbnail-image {
+	padding-bottom: 55%;
+	display: block;
+	background-position: 50% 50%;
+	background-size: cover;
+	transition: all 0.2s ease-in;
+
+	&:hover {
+		
+			transform: scale(1.05);
+			transition: all 0.3s ease-out;
+
+	}
+
+}
+
+.listing__thumbnail-wrap {
+	overflow: hidden
+}
+
+.listing {
+	margin-top: calc-rem(45);
+	margin-bottom: calc-rem(45);
+}
+
+.listing__item {
+	padding-bottom: calc-rem(10);
+}

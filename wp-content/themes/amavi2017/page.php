@@ -16,4 +16,7 @@
 			<br class="clear" />
 			
 		</section>
+
+				<a class="button">Search</a>
+
 <?php get_footer(); ?>

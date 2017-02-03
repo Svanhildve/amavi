@@ -5,7 +5,7 @@ $grid-width:				100%;
 $grid-gutter:				14px;
 
 $breakpoint-sm:			"only screen and (max-width: 480px)";
-$breakpoint-palm:			"only screen and (min-width: 480px)";
+$breakpoint-palm:		"only screen and (min-width: 480px)";
 $breakpoint-md: 		"only screen and (min-width: 768px)";
 $breakpoint-ml:			"only screen and (min-width: 1024px)";
 $breakpoint-lg: 		"only screen and (min-width: 1170px)";
@@ -114,6 +114,11 @@ $breakpoint-lg: 		"only screen and (min-width: 1170px)";
 
 	.wrapper {
 		max-width: 1170px;
+		margin: auto;
+	}
+
+	.large-wrapper {
+		max-width: 1400px;
 		margin: auto;
 	}
 	 

@@ -1,6 +1,6 @@
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	font-family: $display-type;
-	font-weight: bold;
+	font-weight: 600;
 }
 
 h1, .h1 {
@@ -34,7 +34,7 @@ h2, .h2 {
 	}
 }
 
-.h2--featured {
+.h2--featured-large {
 	font-size: calc-rem(35);
 	line-height: calc-rem(35);
 	text-transform: uppercase;
@@ -43,6 +43,16 @@ h2, .h2 {
 	@media #{$breakpoint-md} {
 		font-size: calc-rem(55);
 		line-height: calc-rem(55);
+	}
+}
+
+.h2--featured-medium {
+	font-size: calc-rem(30);
+	line-height: calc-rem(30);
+
+	@media #{$breakpoint-md} {
+		font-size: calc-rem(40);
+		line-height: calc-rem(40);
 	}
 }
 

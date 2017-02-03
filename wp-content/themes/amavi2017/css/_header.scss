@@ -43,7 +43,7 @@
 }
 
 .header__search__link {
-	padding: calc-rem(11) calc-rem(10) 0 0;
+	padding: calc-rem(11) 0 0 0;
 }
 
 .header__nav__list {
@@ -84,13 +84,14 @@
 			height: 100%;
 			width: 100%;
 			text-align: center;
-			background: pink;
-			opacity: 0.8;
-			z-index: 1;
+			background: $light-teal;
+			opacity: 1;
+			z-index: 3;
 		}
 
 		li {
 			display: block;
+			
 		}
 	}
 
@@ -102,6 +103,17 @@
 		transform: translate(-50%, -50%);
 	    text-align: center;
 	    z-index: 10;
+	    font-size: calc-rem(20);
+	    font-weight: 500;
+
+	    li {
+	    	padding: calc-rem(8) 0;
+
+	    }
+
+	    a {
+	    	color: $black;
+	    }
 	}
 
 	.hamburger__line {

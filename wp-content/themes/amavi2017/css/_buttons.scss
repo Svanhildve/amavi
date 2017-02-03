@@ -1,0 +1,66 @@
+.button {	
+	font-family: $display-type;
+	font-size: calc-rem(15);
+	text-transform: uppercase;
+	font-weight: bold;
+	color: $black;
+	border: 2px $black solid;
+	padding: calc-rem(15) calc-rem(25) calc-rem(12) calc-rem(25);	
+	display: inline-block;
+	position: relative;
+	right: 6px;
+	background: transparent;
+	box-shadow: none;
+	text-shadow: none;
+
+	&:before {
+		position: absolute;
+		content: "";
+		display: inline-block;
+		border-top: 2px $light-teal solid;
+		border-right:  2px $light-teal solid;
+		top: 5px;
+		right: -9px;
+		height: 44px;
+		width: 5px;
+	}
+
+	&:after {
+		position: absolute;
+		content: "";
+		display: inline-block;
+		border-left: 2px $light-teal solid;
+		border-bottom:  2px $light-teal solid;
+		top: 44px;
+		left: 5px;
+		height: 5px;
+		width: 100%;
+	}
+
+	&:hover {
+		background: #7FDEDD;
+	//	color: #C2F9F1;
+		color: $black;
+		border: 2px $black solid;
+		right: 3px;
+		top: 3px;
+		transition: background .1s;
+
+		&:before {
+			top: 2px;
+			right: -6px;
+			width: 2px;
+		}
+
+		&:after {
+			top: 44px;
+			left: 2px;
+			height: 2px;
+		}
+	}
+
+}
+
+.button--search {
+	float: right;
+}

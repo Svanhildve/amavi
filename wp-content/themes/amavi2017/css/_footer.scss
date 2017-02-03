@@ -1,13 +1,14 @@
 .footer {
-	position: fixed;
+	//position: fixed;
 	background-color: $blue-zodiac;
 	font-size: calc-rem(16);
 	font-family: $display-type;
 	line-height: calc-rem(24);
-	bottom: 0;
-	left: 0;
+	//bottom: 0;
+	//left: 0;
 	width: 100%;
-	z-index: 0;
+	//z-index: 0;
+	margin-top: 30PX;
 
 	a, a visited {
 		color: $white;
