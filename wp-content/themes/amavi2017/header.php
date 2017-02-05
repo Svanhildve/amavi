@@ -36,6 +36,21 @@
 		    });
 		});
 
+		// Wait for the DOM to be ready (all elements printed on page regardless if loaded or not)
+		$(function() {
+
+		    // Bind a click event to anything with the class "search-link"
+		    $('.search-link').click(function() {
+		        
+		          // Toggle the Body Class "show-nav"
+		          $('body').toggleClass('show-search');
+
+		          // Deactivate the default behavior of going to the next page on click 
+		          return false;
+
+		    });
+		});
+
 
 	</script>
 
@@ -78,15 +93,15 @@
 		<div class="header__search col-m-3">
 			
 			<div class="header__search__link">
-				<a href="#" id="search-link">Seargjch</a>
+				<a href="#" class="search-link">Search</a>
 			</div>
 
 		</div>
 
 	</div>
 
-	<div class="search">
-		<div class="search__inner row large-wrapper">
+	<div class="search-expand">
+		<div class="search-expand__inner row large-wrapper">
 			<div class="col-s-12">
 				<?php get_search_form(); ?>
 			</div>

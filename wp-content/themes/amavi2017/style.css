@@ -595,8 +595,8 @@ h2 a {
     position: absolute;
     content: "";
     display: inline-block;
-    border-top: 2px #87D8D7 solid;
-    border-right: 2px #87D8D7 solid;
+    border-top: 2px #33c4c3 solid;
+    border-right: 2px #33c4c3 solid;
     top: 5px;
     right: -9px;
     height: 44px;
@@ -605,8 +605,8 @@ h2 a {
     position: absolute;
     content: "";
     display: inline-block;
-    border-left: 2px #87D8D7 solid;
-    border-bottom: 2px #87D8D7 solid;
+    border-left: 2px #33c4c3 solid;
+    border-bottom: 2px #33c4c3 solid;
     top: 44px;
     left: 5px;
     height: 5px;
@@ -834,12 +834,6 @@ h2 a {
   font-size: 0.83333rem;
   padding-bottom: 0.27778rem; }
 
-.category-page--empty {
-  font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;
-  font-size: 0.88889rem;
-  line-height: 1.44444rem;
-  text-align: center; }
-
 /* components */
 .meta {
   font-size: 0.77778rem;
@@ -876,9 +870,6 @@ h2 a {
   background-position: 50% 50%;
   background-size: cover;
   transition: all 0.2s ease-in; }
-  .listing__thumbnail-image:hover {
-    transform: scale(1.05);
-    transition: all 0.3s ease-out; }
 
 .listing__thumbnail-wrap {
   overflow: hidden; }
@@ -889,6 +880,18 @@ h2 a {
 
 .listing__item {
   padding-bottom: 0.55556rem; }
+
+.listing--empty {
+  font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;
+  font-size: 0.88889rem;
+  line-height: 1.44444rem;
+  text-align: center; }
+
+.listing__item:hover .listing__thumbnail-image {
+  transform: scale(1.05);
+  transition: all 0.3s ease-out; }
+.listing__item:hover h2 a {
+  color: blue; }
 
 .featured-hero__thumbnail-image {
   padding-bottom: 65%;
@@ -995,14 +998,16 @@ h1 {
   text-align: center;
   padding: 7.22222rem 0; }
 
-.search {
+.search-expand {
+  display: none; }
+
+.show-search .search-expand {
   width: 100%;
   background-color: #C2F9F1;
   display: block;
-  margin-bottom: 20px;
   padding: 0 14px; }
 
-.search__inner {
+.search-expand__inner {
   padding-top: 1.94444rem;
   padding-bottom: 1.38889rem; }
 
@@ -1023,7 +1028,7 @@ h1 {
   border-bottom: 3px solid #444444; }
 
 ::-webkit-input-placeholder {
-  color: #7FDEDD; }
+  color: #33c4c3; }
 
 .search-label {
   float: left;

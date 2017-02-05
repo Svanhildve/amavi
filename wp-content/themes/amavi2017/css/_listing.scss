@@ -1,6 +1,6 @@
 .listing__thumbnail {
 	display: block;
-	overflow:hidden;
+	overflow: hidden;
 }
 
 .listing__thumbnail-image {
@@ -9,14 +9,6 @@
 	background-position: 50% 50%;
 	background-size: cover;
 	transition: all 0.2s ease-in;
-
-	&:hover {
-		
-			transform: scale(1.05);
-			transition: all 0.3s ease-out;
-
-	}
-
 }
 
 .listing__thumbnail-wrap {
@@ -30,4 +22,24 @@
 
 .listing__item {
 	padding-bottom: calc-rem(10);
+}
+
+.listing--empty {
+	font-family: $display-type;
+	font-size: calc-rem(16);
+	line-height: calc-rem(26);
+	text-align: center;
+}
+
+.listing__item:hover {
+
+	.listing__thumbnail-image {
+		transform: scale(1.05);
+		transition: all 0.3s ease-out;
+	}
+
+	h2 a {
+		color: blue;
+	}
+
 }

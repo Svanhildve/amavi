@@ -17,8 +17,8 @@
 		position: absolute;
 		content: "";
 		display: inline-block;
-		border-top: 2px $light-teal solid;
-		border-right:  2px $light-teal solid;
+		border-top: 2px darken(#7FDEDD, 20%) solid;
+		border-right:  2px darken(#7FDEDD, 20%) solid;
 		top: 5px;
 		right: -9px;
 		height: 44px;
@@ -29,8 +29,8 @@
 		position: absolute;
 		content: "";
 		display: inline-block;
-		border-left: 2px $light-teal solid;
-		border-bottom:  2px $light-teal solid;
+		border-left: 2px darken(#7FDEDD, 20%) solid;
+		border-bottom:  2px darken(#7FDEDD, 20%) solid;
 		top: 44px;
 		left: 5px;
 		height: 5px;
