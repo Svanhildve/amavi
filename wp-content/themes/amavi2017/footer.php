@@ -23,7 +23,7 @@
 
 			<div class="col-s-12 col-m-3 footer__some">
 
-				<a href="#">Amavi Journal on facebook</a>
+				<a href="#"><span class="facebook">Amavi Journal on facebook</span></a>
 
 			</div>
 

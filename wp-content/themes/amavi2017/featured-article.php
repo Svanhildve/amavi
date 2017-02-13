@@ -6,7 +6,7 @@
 
 			<div class="featured-article__teaser row wrapper">
 
-				<div class="col-s-offset-2 col-s-8 featured-article__teaser-body">
+				<div class="col-pm-offset-1 col-m-offset-2 col-s-12 col-pm-10 col-m-8 featured-article__teaser-body">
 
 					<div class="meta">
 					

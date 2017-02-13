@@ -1,4 +1,4 @@
-<div class="featured-hero row wrapper">
+<div class="featured-hero row large-wrapper">
 
 	<div class="featured-hero__teaser col-s-12 col-pm-9 col-m-7 col-ml-5 col-l-5">
 

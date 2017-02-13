@@ -44,6 +44,18 @@
 
 .header__search__link {
 	padding: calc-rem(11) 0 0 0;
+
+	&:before {
+		content: "";
+		position: relative;
+		width: 16px;
+		height: 16px;
+		display: inline-block;
+		//background: blue;
+		margin-right: 10px;
+		vertical-align: middle;
+		background-image: url('images/search.svg');
+	}
 }
 
 .header__nav__list {

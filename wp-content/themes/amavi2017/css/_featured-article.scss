@@ -28,7 +28,11 @@
 }
 
 .featured-article__teaser {
-	padding: calc-rem(100) 0;
+	padding: calc-rem(50) 0;
+
+	@media #{$breakpoint-md} {
+		padding: calc-rem(100) 0;
+	}
 	
 }
 

@@ -50,3 +50,17 @@
 	color: $white;
 	padding: calc-rem(60) 0;
 } */
+
+.facebook {
+	&:before {
+		content: "";
+		position: relative;
+		width: 18px;
+		height: 18px;
+		display: inline-block;
+		//background: blue;
+		margin-right: 10px;
+		vertical-align: middle;
+		background-image: url('images/facebook.svg');
+	}
+}
