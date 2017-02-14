@@ -9,7 +9,7 @@
 	}
 
 	@media #{$breakpoint-lg} {
-		margin-right: calc(-100vw / 2 + 1170px / 2);
+		//margin-right: calc(-100vw / 2 + 1170px / 2);
 	}
 }
 
@@ -25,9 +25,9 @@
 	}
 
 	@media #{$breakpoint-lg} {
-		margin-left: calc(-100vw / 2 + 1170px / 2);
-		padding-left: calc-rem(25);
-		margin-top: -30px;
+	//	margin-left: calc(-100vw / 2 + 1170px / 2);
+	//	padding-left: calc-rem(25);
+	//	margin-top: -30px;
 		
 	}
 }

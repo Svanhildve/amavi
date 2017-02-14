@@ -9,8 +9,6 @@
 
 			</div>	
 
-			<?php query_posts('posts_per_page=2'); ?>
-
 			<?php get_template_part( 'listing' ); ?>
 
 			<div class="pagination row wrapper">

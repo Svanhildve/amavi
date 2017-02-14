@@ -16,36 +16,28 @@ if ( function_exists( 'add_theme_support' ) ) {
 }
 
 
-
-// register_sidebar(array( 'before_title' => '<h3>', 'after_title' => '</h3>' ));
-
-
-
-function custom_post_portfolio() {
-    $args = array(
-    	'public' 		=> true,
-    	'label'  		=> 'Portfolio Items',
-    	'supports'		=> array('title', 'editor', 'thumbnail', 'excerpt', 'page-attributes'),
-	 	   'has_archive'	=> false,
-		  'rewrite'		=> array( 
-			'slug' 			=> 'portfolio',
-			'with_front' 	=> '1',
-			'capability_type'     => 'page'
-		),
-    );
-    register_post_type( 'portfolio_items', $args );
-}
-
-add_action( 'init', 'custom_post_portfolio' );
-
-
-
-
 function wpdocs_custom_excerpt_length( $length ) {
     return 40;
 }
 
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
+function my_post_queries( $query ) {
+  // do not alter the query on wp-admin pages and only alter it if it's the main query
+  if (!is_admin() && $query->is_main_query()){
+
+    // alter the query for the home and category pages 
+
+    if(is_home()){
+      $query->set('posts_per_page', 3);
+    }
+
+    if(is_category()){
+      $query->set('posts_per_page', 2);
+    }
+
+  }
+}
+add_action( 'pre_get_posts', 'my_post_queries' );
 
 ?>
