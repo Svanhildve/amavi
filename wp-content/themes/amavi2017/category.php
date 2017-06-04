@@ -11,17 +11,7 @@
 
 			<?php get_template_part( 'listing' ); ?>
 
-			<div class="pagination row wrapper">
-
-				<div class="pagination__body col-s-12">
-
-					<div class="pagination__previous"><?php next_posts_link( 'Previous page' ); ?></div>
-					<div class="pagination__current">page 1 of 4</div>
-					<div class="pagination__next"><?php previous_posts_link( 'Next page' ); ?></div>
-
-				</div>
-
-			</div>
+			<?php get_template_part( 'pagination' ); ?>
 			
 		</div>
 <?php get_footer(); ?>

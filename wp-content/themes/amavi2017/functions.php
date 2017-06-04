@@ -36,6 +36,10 @@ function my_post_queries( $query ) {
       $query->set('posts_per_page', 2);
     }
 
+    if(is_search()){
+      $query->set('posts_per_page', 2);
+    }
+
   }
 }
 add_action( 'pre_get_posts', 'my_post_queries' );
