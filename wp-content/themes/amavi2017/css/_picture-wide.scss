@@ -1,0 +1,10 @@
+.picture-wide__image {
+	width: 100%;
+}
+
+.picture-wide {
+
+	@media #{$breakpoint-md} {
+		margin: 15px 0;
+	}
+}

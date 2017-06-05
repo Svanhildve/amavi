@@ -1,0 +1,25 @@
+.two-pictures__image {
+	width: 100%;
+}
+
+
+.two-pictures {
+
+	@media #{$breakpoint-md} {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+}
+
+
+
+/* @media #{$breakpoint-md} {
+		margin: 15px 0;
+	}
+*/
+
+.two-pictures-one, .two-pictures-two {
+
+}

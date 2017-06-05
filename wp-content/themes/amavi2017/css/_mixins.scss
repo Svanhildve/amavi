@@ -1,0 +1,13 @@
+@mixin white-link {
+    color: $white;
+	text-decoration: none;
+    background-repeat: repeat-x;
+    background-size: 2px .1em;
+    background-position: 0 1.4em;
+    background-image: linear-gradient(currentColor,currentColor);
+    display: inline-block;
+
+    &:hover {
+    	background-size: 0;
+    }
+}

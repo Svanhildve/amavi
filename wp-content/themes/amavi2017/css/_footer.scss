@@ -1,19 +1,15 @@
 .footer {
-	//position: fixed;
 	background-color: $blue-zodiac;
-	font-size: calc-rem(16);
+	font-size: calc-rem(14);
 	font-family: $display-type;
 	line-height: calc-rem(24);
-	//bottom: 0;
-	//left: 0;
 	width: 100%;
-	//z-index: 0;
 	margin-top: 30PX;
+	font-weight: 100;
+	padding: 0px 15px 15px 15px;
 
 	a, a visited {
-		color: $white;
-		box-shadow: inset 0 -0.06em 0 0 $white, inset 0 -0.1em 0 0 currentColor;
-		text-shadow: 0.04em 0 $blue-zodiac, -0.04em 0 $blue-zodiac, 1.5px 0 $blue-zodiac, -1.5px 0 $blue-zodiac;
+		@include white-link;
 	}
 
 	p {
@@ -23,14 +19,20 @@
 
 .footer__content {
 	color: $white;
-	padding: calc-rem(60) 0;
+	padding: calc-rem(30) 0;
+
+	@media #{$breakpoint-md} {
+		padding: calc-rem(60) 0;
+	}
 }
 
+.footer__nav a {
+	@include white-link;
+	margin-right: 20px;
+}
 
 /* .footer {
 	//background-color: $blue-zodiac;
-	background-color: $light-teal;
-	color: $black;
 	font-size: calc-rem(16);
 	font-family: $display-type;
 	line-height: calc-rem(24);
@@ -51,16 +53,21 @@
 	padding: calc-rem(60) 0;
 } */
 
+.footer__some a {
+	background: none;
+}
+
 .facebook {
-	&:before {
-		content: "";
-		position: relative;
-		width: 18px;
-		height: 18px;
-		display: inline-block;
-		//background: blue;
-		margin-right: 10px;
-		vertical-align: middle;
-		background-image: url('images/facebook.svg');
-	}
+	display: inline;
+}
+
+.facebook-icon {
+	position: relative;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	margin-right: 8px;
+	vertical-align: top;
+	text-decoration: none;
+	background: none;
 }

@@ -100,12 +100,24 @@
 
 	</div>
 
-	<div class="search-expand">
-		<div class="search-expand__inner row large-wrapper">
-			<div class="col-s-12">
-				<?php get_search_form(); ?>
+	<!--<div class="search-overlay">
+		
+		<div class="row">
+			<div class="search-overlay__content col-s-12">
+				<div class="search-overlay__form row wrapper">
+					<div class="col-s-12">
+						<?php get_search_form(); ?>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+
+		<div class="search-overlay__close">
+			<div class="search-overlay__close-lines"></div>
+		</div>
+		
+	</div>-->
+
+
 
 	<div class="inner-page">

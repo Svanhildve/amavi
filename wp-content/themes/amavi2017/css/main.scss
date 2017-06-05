@@ -13,6 +13,7 @@ License URI:
 
 /* base styles */
 
+@import 'mixins';
 @import 'grid';
 @import 'normalise';
 @import 'functions';
@@ -43,3 +44,8 @@ License URI:
 @import 'more-articles';
 @import 'search-expand';
 @import 'pagination';
+
+/* buildable article blocks */
+
+@import 'picture-wide';
+@import 'two-pictures';
