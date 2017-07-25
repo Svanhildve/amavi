@@ -12,7 +12,7 @@
 			
 			<div class="meta__category">
 
-				<?php the_category(); ?>
+				<?php the_category(', '); ?>
 
 			</div>
 

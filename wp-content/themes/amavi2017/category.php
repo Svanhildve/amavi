@@ -10,8 +10,9 @@
 			</div>	
 
 			<?php get_template_part( 'listing' ); ?>
-
+			
 			<?php get_template_part( 'pagination' ); ?>
+
 			
 		</div>
 <?php get_footer(); ?>

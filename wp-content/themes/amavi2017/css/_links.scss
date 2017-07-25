@@ -6,7 +6,9 @@ a, a:visited {
 }
 
 a:hover, a:active {
-	color: $teal;
+//	color: $teal;
+	color: #008291;
+	text-decoration: underline;
 }
 
 h1 {
@@ -20,6 +22,15 @@ h1 {
 	font-family: $display-type;
 	font-size: calc-rem(14);
 	font-weight: 900;
+	box-shadow: inset 0 -0.06em 0 0 #fff, inset 0 -0.1em 0 0 $teal;
+	text-shadow: 0.04em 0 #fff, -0.04em 0 #fff, 1.5px 0 #fff, -1.5px 0 #fff;
+	padding-bottom: 6px;
+
+	&:hover {
+		box-shadow: inset 0 -0.06em 0 0 #fff, inset 0 -0.1em 0 0 #008291;
+		text-shadow: 0.04em 0 #fff, -0.04em 0 #fff, 1.5px 0 #fff, -1.5px 0 #fff;
+		text-decoration: none;
+	}
 }
 
 h2 a {

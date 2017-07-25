@@ -4,10 +4,11 @@ $body-copy:		'FranklinGothic URW', Helvetica, Sans-serif;
 $display-type:	'Sofia pro', Futura, "Gill Sans", Sans-serif;
 
 html {
-	font-family: $body-copy;
+	font-family: $display-type;
 	font-size: 18px;
 	line-height: 28px;
 	color: $black;
+	font-weight: 100;
 }
 
 blockquote {

@@ -420,10 +420,11 @@ ol li, ul li {
 /* greys */
 /* variables */
 html {
-  font-family: "FranklinGothic URW", Helvetica, Sans-serif;
+  font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;
   font-size: 18px;
   line-height: 28px;
-  color: #444444; }
+  color: #444444;
+  font-weight: 100; }
 
 blockquote {
   font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;
@@ -496,6 +497,9 @@ h1, .h1 {
   text-transform: uppercase;
   font-weight: 900; }
 
+.h1--page {
+  text-align: center; }
+
 h2, .h2 {
   font-size: 1.44444rem;
   line-height: 1.66667rem;
@@ -567,7 +571,8 @@ a, a:visited {
   color: #444444; }
 
 a:hover, a:active {
-  color: #39A2A1; }
+  color: #008291;
+  text-decoration: underline; }
 
 h1 a, h1 a:visited {
   text-shadow: none;
@@ -576,7 +581,14 @@ h1 a, h1 a:visited {
 .cta-link {
   font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;
   font-size: 0.77778rem;
-  font-weight: 900; }
+  font-weight: 900;
+  box-shadow: inset 0 -0.06em 0 0 #fff, inset 0 -0.1em 0 0 #39A2A1;
+  text-shadow: 0.04em 0 #fff, -0.04em 0 #fff, 1.5px 0 #fff, -1.5px 0 #fff;
+  padding-bottom: 6px; }
+  .cta-link:hover {
+    box-shadow: inset 0 -0.06em 0 0 #fff, inset 0 -0.1em 0 0 #008291;
+    text-shadow: 0.04em 0 #fff, -0.04em 0 #fff, 1.5px 0 #fff, -1.5px 0 #fff;
+    text-decoration: none; }
 
 h2 a {
   box-shadow: none;
@@ -889,6 +901,9 @@ h2 a {
   font-size: 0.83333rem;
   padding-bottom: 0.27778rem; }
 
+.standard-page__heading {
+  text-align: center; }
+
 /* components */
 .meta {
   font-size: 0.77778rem;
@@ -971,9 +986,12 @@ h2 a {
 
 .featured-hero {
   position: relative; }
+  .featured-hero .excerpt {
+    padding-right: 120px; }
 
 .featured-hero__teaser:hover h2 a {
-  color: #444444; }
+  color: #444444;
+  text-decoration: none; }
 .featured-hero__teaser:hover h2:before {
   transform: scaleX(1);
   transform-origin: left;
