@@ -43,10 +43,12 @@ h2, .h2 {
 	line-height: calc-rem(35);
 	text-transform: uppercase;
 	font-weight: 900;
+	margin-top: calc-rem(10);
 
 	@media #{$breakpoint-md} {
 		font-size: calc-rem(55);
 		line-height: calc-rem(55);
+		margin-top: calc-rem(20);
 	}
 }
 

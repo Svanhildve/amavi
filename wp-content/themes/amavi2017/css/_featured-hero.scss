@@ -14,16 +14,16 @@
 }
 
 .featured-hero__teaser {
-	position: absolute;
-	//width: 40%;
-	top: 50%;
-	transform: translateY(-50%);
-	color: $white;
-
 	
-	@media #{$breakpoint-ml} {
-		color: $black;
+	
+	color: $black;
+
+	@media #{$breakpoint-md} {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
 	}
+
 
 	@media #{$breakpoint-lg} {
 	//	margin-left: calc(-100vw / 2 + 1170px / 2);
@@ -45,9 +45,26 @@
 .featured-hero {
 	position: relative;
 
-	.excerpt {
-		padding-right: 120px;
+	@media #{$breakpoint-md} {
+
+		.excerpt {
+			padding-right: 120px;
+		}
+
 	}
+}
+
+/*.featured-hero:hover {
+
+	.featured-hero__thumbnail-image {
+		transform: scale(1.05);
+		transition: all 0.3s ease-in-out;
+	}
+
+}*/
+
+.featured-hero__thumbnail-wrap {
+	overflow: hidden;
 }
 
 
@@ -68,6 +85,7 @@
 h1 {
 	display: inline-block;
 	position: relative;
+	z-index: 20;
 	&:before {
 		top: 0;
 	    right: 0;
@@ -82,6 +100,6 @@ h1 {
 	    transform: scaleX(0);
 	    transform-origin: right;
 	    transition: transform .7s cubic-bezier(.19,1,.22,1);
-	    z-index: -1;
+	    z-index: 1;
 	}
 }
