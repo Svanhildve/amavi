@@ -570,25 +570,32 @@ h6, .h6 {
 
 a, a:visited {
   text-decoration: none;
-  color: #444444; }
+  color: #008285; }
 
 a:hover, a:active {
-  color: #008291;
+  color: #007175;
   text-decoration: underline; }
 
 h1 a, h1 a:visited {
   text-shadow: none;
   box-shadow: none; }
 
+h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited, .header a, .header a:visited {
+  color: #444444; }
+h1 a:hover, h1 a:active, h2 a:hover, h2 a:active, h3 a:hover, h3 a:active, h4 a:hover, h4 a:active, h5 a:hover, h5 a:active, h6 a:hover, h6 a:active, .header a:hover, .header a:active {
+  color: #007175;
+  text-decoration: none; }
+
 .cta-link {
   font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;
-  font-size: 0.77778rem;
-  font-weight: 900;
-  box-shadow: inset 0 -0.06em 0 0 #fff, inset 0 -0.1em 0 0 #39A2A1;
+  font-size: 0.88889rem;
+  font-weight: 700;
+  box-shadow: inset 0 -0.06em 0 0 #fff, inset 0 -0.1em 0 0 #87D8D7;
   text-shadow: 0.04em 0 #fff, -0.04em 0 #fff, 1.5px 0 #fff, -1.5px 0 #fff;
-  padding-bottom: 6px; }
+  padding-bottom: 5px;
+  transition: .2s; }
   .cta-link:hover {
-    box-shadow: inset 0 -0.06em 0 0 #fff, inset 0 -0.1em 0 0 #008291;
+    box-shadow: inset 0 -0.06em 0 0 #fff, inset 0 -0.1em 0 0 #007175;
     text-shadow: 0.04em 0 #fff, -0.04em 0 #fff, 1.5px 0 #fff, -1.5px 0 #fff;
     text-decoration: none; }
 
@@ -962,8 +969,6 @@ h2 a {
 .listing__item:hover .listing__thumbnail-image {
   transform: scale(1.05);
   transition: all 0.3s ease-out; }
-.listing__item:hover h2 a {
-  color: blue; }
 
 .listing--grid .listing__thumbnail {
   margin-bottom: 16px; }
@@ -980,11 +985,21 @@ h2 a {
     .featured-hero__teaser {
       position: absolute;
       top: 50%;
-      transform: translateY(-50%); } }
+      transform: translateY(-50%);
+      color: #ffffff;
+      left: 30px; }
+      .featured-hero__teaser h1 a {
+        color: #ffffff; } }
+  @media only screen and (min-width: 1170px) {
+    .featured-hero__teaser {
+      color: #444444;
+      left: 0; }
+      .featured-hero__teaser h1 a {
+        color: #444444; } }
 
 .featured-hero__thumbnail {
   padding-top: 0; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1170px) {
     .featured-hero__thumbnail {
       padding-right: 0; } }
 
@@ -1067,21 +1082,29 @@ h1 {
   z-index: 2; }
 
 .more-articles__link {
-  font-size: 2.77778rem;
+  font-size: 1.55556rem;
   font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;
   font-weight: 900; }
+  @media only screen and (min-width: 768px) {
+    .more-articles__link {
+      font-size: 2.22222rem; } }
   .more-articles__link a:link {
-    text-shadow: none;
-    box-shadow: inset 0 -0.01px 0 0 #fff, inset 0 -25px 0 0 #C2F9F1;
-    transition: 0.2s; }
+    transition: .2s;
+    box-shadow: inset 0 -0.07em 0 0 #fff, inset 0 -0.1em 0 0 #87D8D7;
+    text-shadow: 0.04em 0 #fff, -0.04em 0 #fff, 1.5px 0 #fff, -1.5px 0 #fff;
+    padding-bottom: 7px; }
   .more-articles__link a:hover {
-    color: #444444;
-    box-shadow: inset 0 -0.01px 0 0 #fff, inset 0 -56px 0 0 #C2F9F1;
-    transition: 0.2s; }
+    color: #007175;
+    transition: .2s;
+    text-decoration: none;
+    box-shadow: inset 0 -0.07em 0 0 #fff, inset 0 -0.1em 0 0 #007175; }
 
 .more-articles {
   text-align: center;
-  padding: 7.22222rem 0; }
+  padding: 0.83333rem 0 3.88889rem 0; }
+  @media only screen and (min-width: 768px) {
+    .more-articles {
+      padding: 4.16667rem 0 7.22222rem 0; } }
 
 .search-overlay {
   z-index: 1;
@@ -1173,11 +1196,28 @@ h1 {
 
 .pagination__previous {
   display: inline-block;
-  font-weight: bold; }
+  font-weight: bold;
+  padding-left: 0.55556rem; }
+  .pagination__previous:before {
+    content: "";
+    position: relative;
+    right: 0;
+    left: 7px;
+    top: 9px;
+    width: 5px;
+    height: 9px;
+    display: inline-block;
+    float: right;
+    vertical-align: middle;
+    background-image: url("images/chevron-small-right.svg");
+    transition: .2s ease-out; }
+  .pagination__previous:hover:before {
+    left: 9px; }
 
 .pagination__next {
   display: inline-block;
-  font-weight: bold; }
+  font-weight: bold;
+  padding-right: 0.55556rem; }
 
 .pagination__current {
   display: inline-block; }

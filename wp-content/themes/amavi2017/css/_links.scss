@@ -1,13 +1,14 @@
 a, a:visited {
 	text-decoration: none;
-	color: $black;
+//	color: $teal;
+	color: #008285;
 //	box-shadow: inset 0 -0.06em 0 0 #fff, inset 0 -0.1em 0 0 currentColor;
 //	text-shadow: 0.04em 0 #fff, -0.04em 0 #fff, 1.5px 0 #fff, -1.5px 0 #fff;
 }
 
 a:hover, a:active {
 //	color: $teal;
-	color: #008291;
+	color: #007175;
 	text-decoration: underline;
 }
 
@@ -18,16 +19,28 @@ h1 {
 	}
 }
 
+h1, h2, h3, h4, h5, h6, .header {
+	a, a:visited {
+		color: $black;
+	}
+
+	a:hover, a:active {
+		color: #007175;
+		text-decoration: none;
+	}
+}
+
 .cta-link {
 	font-family: $display-type;
-	font-size: calc-rem(14);
-	font-weight: 900;
-	box-shadow: inset 0 -0.06em 0 0 #fff, inset 0 -0.1em 0 0 $teal;
+	font-size: calc-rem(16);
+	font-weight: 700;
+	box-shadow: inset 0 -0.06em 0 0 #fff, inset 0 -0.1em 0 0 $light-teal;
 	text-shadow: 0.04em 0 #fff, -0.04em 0 #fff, 1.5px 0 #fff, -1.5px 0 #fff;
-	padding-bottom: 6px;
+	padding-bottom: 5px;
+	transition: .2s;
 
 	&:hover {
-		box-shadow: inset 0 -0.06em 0 0 #fff, inset 0 -0.1em 0 0 #008291;
+		box-shadow: inset 0 -0.06em 0 0 #fff, inset 0 -0.1em 0 0 #007175;
 		text-shadow: 0.04em 0 #fff, -0.04em 0 #fff, 1.5px 0 #fff, -1.5px 0 #fff;
 		text-decoration: none;
 	}

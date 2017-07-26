@@ -11,11 +11,36 @@
 .pagination__previous {
 	display: inline-block;
 	font-weight: bold;
+	padding-left: calc-rem(10);
+
+	&:before {
+		content: "";
+		position: relative;
+		right: 0;
+		left: 7px;
+		top: 9px;
+		width: 5px;
+		height: 9px;
+		display: inline-block;
+	//	margin-right: 10px;
+		float: right;
+		vertical-align: middle;
+		background-image: url('images/chevron-small-right.svg');
+		transition: .2s ease-out;
+	}
+
+	&:hover {
+
+		&:before {
+			left: 9px;
+		}
+	}
 }
 
 .pagination__next {
 	display: inline-block;
 	font-weight: bold;
+	padding-right: calc-rem(10);
 }
 
 .pagination__current {

@@ -22,6 +22,21 @@
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
+		color: $white;
+		left: 30px;
+
+		h1 a {
+			color: $white;
+		}
+	}
+
+	@media #{$breakpoint-lg} {
+		color: $black;
+		left: 0;
+
+		h1 a {
+			color: $black;
+		}
 	}
 
 
@@ -31,12 +46,13 @@
 	//	margin-top: -30px;
 		
 	}
+
 }
 
 .featured-hero__thumbnail {
 	padding-top: 0;
 
-	@media #{$breakpoint-md} {
+	@media #{$breakpoint-lg} {
 		padding-right: 0;
 		
 	}
