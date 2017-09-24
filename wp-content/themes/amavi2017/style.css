@@ -1194,30 +1194,46 @@ h1 {
 .pagination__body {
   border-top: 1px #EBEBEB solid; }
 
-.pagination__previous {
-  display: inline-block;
-  font-weight: bold;
-  padding-left: 0.55556rem; }
-  .pagination__previous:before {
-    content: "";
-    position: relative;
-    right: 0;
-    left: 7px;
-    top: 9px;
-    width: 5px;
-    height: 9px;
-    display: inline-block;
-    float: right;
-    vertical-align: middle;
-    background-image: url("images/chevron-small-right.svg");
-    transition: .2s ease-out; }
-  .pagination__previous:hover:before {
-    left: 9px; }
-
 .pagination__next {
   display: inline-block;
   font-weight: bold;
+  padding-left: 0.55556rem; }
+
+.pagination__next-link:before {
+  content: "";
+  position: relative;
+  right: 0;
+  left: 7px;
+  top: 9px;
+  width: 5px;
+  height: 9px;
+  display: inline-block;
+  float: right;
+  vertical-align: middle;
+  background-image: url("images/chevron-small-right.svg");
+  transition: .2s ease-out; }
+.pagination__next-link:hover:before {
+  left: 9px; }
+
+.pagination__previous {
+  display: inline-block;
+  font-weight: bold;
   padding-right: 0.55556rem; }
+
+.pagination__previous-link:before {
+  content: "";
+  position: relative;
+  right: 7px;
+  top: 9px;
+  width: 5px;
+  height: 9px;
+  display: inline-block;
+  float: left;
+  vertical-align: middle;
+  background-image: url("images/chevron-small-left.svg");
+  transition: .2s ease-out; }
+.pagination__previous-link:hover:before {
+  right: 9px; }
 
 .pagination__current {
   display: inline-block; }
