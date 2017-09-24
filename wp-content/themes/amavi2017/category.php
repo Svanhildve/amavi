@@ -9,10 +9,28 @@
 
 			</div>	
 
-			<?php get_template_part( 'listing' ); ?>
-			
-			<?php get_template_part( 'pagination' ); ?>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
+				<?php get_template_part( 'listing' ); ?>
+
+			<?php endwhile; ?>
+
+			<?php if ($wp_query->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
+
+				<?php get_template_part( 'pagination' ); ?>
+
+			<?php } ?>
+
+			<?php else: ?>
+					
+			<div class="row wrapper listing--empty">
+				<div class="col-s-12">
+					<p><?php _e('There are no posts in this category'); ?></p>
+				</div>
+			</div>
+				
+			<?php endif; ?>
 			
 		</div>
+
 <?php get_footer(); ?>

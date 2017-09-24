@@ -1,6 +1,6 @@
+
+
 			<div class="listing">
-			
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 				<div class="listing__item row wrapper">
 
@@ -36,15 +36,5 @@
 					</div>		
 
 				</div>
-
-				<?php endwhile; else: ?>
-						
-				<div class="row wrapper listing--empty">
-					<div class="col-s-12">
-						<p><?php _e('There are no posts in this category'); ?></p>
-					</div>
-				</div>
-					
-				<?php endif; ?>
 
 			</div>
