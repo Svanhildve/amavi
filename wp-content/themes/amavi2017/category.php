@@ -9,11 +9,15 @@
 
 			</div>	
 
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<div class="listing">
 
-				<?php get_template_part( 'listing' ); ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-			<?php endwhile; ?>
+					<?php get_template_part( 'listing' ); ?>
+
+				<?php endwhile; ?>
+
+			</div>
 
 			<?php if ($wp_query->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
 

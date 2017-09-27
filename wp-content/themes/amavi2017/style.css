@@ -498,7 +498,8 @@ h1, .h1 {
   font-weight: 900; }
 
 .h1--page {
-  text-align: center; }
+  text-align: center;
+  margin-top: 50px; }
 
 h2, .h2 {
   font-size: 1.44444rem;
@@ -1112,7 +1113,10 @@ h1 {
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+  visibility: hidden;
+  opacity: 0; }
   .search-overlay:after {
     content: '';
     position: fixed;
@@ -1122,12 +1126,27 @@ h1 {
     width: 100%;
     text-align: center;
     background: #ffffff;
-    opacity: 0.9;
-    z-index: 1; }
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.2s ease-in-out; }
   .search-overlay .search-input {
-    border-bottom: 2px solid #444444;
+    border-bottom: 2px solid #e6e6e6;
     color: #444444;
-    font-size: 2.77778rem; }
+    font-size: 3.33333rem; }
+    .search-overlay .search-input:hover {
+      border-bottom: 2px solid #C8C8C8; }
+    .search-overlay .search-input:focus {
+      border-bottom: 2px solid #7FDEDD; }
+
+.show-search .search-overlay {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.2s ease-in-out; }
+  .show-search .search-overlay:after {
+    opacity: 0.96;
+    transition: all 0.2s ease-in-out; }
+.show-search .header__search__link {
+  visibility: hidden; }
 
 .search-overlay__content {
   display: block;
@@ -1138,7 +1157,10 @@ h1 {
   z-index: 10; }
 
 .search-overlay__close {
-  display: inline-block; }
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  top: 40px; }
 
 .search-overlay__close-lines:before, .search-overlay__close-lines:after {
   content: "";
@@ -1172,19 +1194,23 @@ h1 {
   border-bottom: 2px solid #444444;
   font-size: 35px;
   font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;
-  float: left;
   margin: 10px 0;
   display: inline-block;
   vertical-align: bottom;
   margin-right: 20px;
-  width: calc(100% - 146px); }
+  width: 100%; }
 
 .search-input:focus {
   border-bottom: 2px solid #444444; }
 
+::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.1); }
+
 .search-label {
-  float: left;
-  display: none; }
+  text-transform: uppercase;
+  font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;
+  font-weight: bold;
+  font-size: 0.77778rem; }
 
 .pagination {
   font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;

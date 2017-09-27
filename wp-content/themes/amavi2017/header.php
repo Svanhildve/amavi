@@ -13,9 +13,9 @@
 
 	<title><?php bloginfo('name'); ?> <?php if ( is_single() ) { ?> &raquo; Blog Archive <?php } ?> <?php wp_title(); ?></title>
 
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/images/favicon-16x16.png">
 
-	<!-- må erstatte faviconet -->
-	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png" type="image/png">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
 
@@ -96,16 +96,17 @@
 				<a href="#" class="search-link">Search</a>
 			</div>
 
+
 		</div>
 
 	</div>
 
-	<!--<div class="search-overlay">
+	<div class="search-overlay">
 		
 		<div class="row">
 			<div class="search-overlay__content col-s-12">
 				<div class="search-overlay__form row wrapper">
-					<div class="col-s-12">
+					<div class="col-m-offset-2 col-m-8">
 						<?php get_search_form(); ?>
 					</div>
 				</div>
@@ -114,9 +115,10 @@
 
 		<div class="search-overlay__close">
 			<div class="search-overlay__close-lines"></div>
+			<a href="#" class="search-link">Close</a>
 		</div>
 		
-	</div>-->
+	</div>
 
 
 

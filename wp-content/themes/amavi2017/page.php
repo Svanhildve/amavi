@@ -9,6 +9,11 @@
 					<div class="col-s-12">
 					
 						<h1 class="h1--page"><?php single_post_title( '' ); ?></h1>
+						<p class="lede">
+
+							<?php the_field('lede_paragraph'); ?>
+							
+						</p>
 
 					</div>
 
@@ -16,7 +21,16 @@
 
 				<div class="standard-page__content row wrapper">
 
+					<div class="col-s-12 col-m-12">
+
+						<img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>" style="width: 100%;">
+
+					</div>
+
+
 					<div class="col-s-12 col-m-offset-2 col-m-8">
+
+					
 
 					<?php the_content(''); ?>
 

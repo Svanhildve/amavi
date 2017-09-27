@@ -1,6 +1,6 @@
 
 
-			<div class="listing">
+
 
 				<div class="listing__item row wrapper">
 
@@ -36,5 +36,3 @@
 					</div>		
 
 				</div>
-
-			</div>

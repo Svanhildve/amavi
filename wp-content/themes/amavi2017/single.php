@@ -38,7 +38,13 @@
 				<div class="single-post__intro col-s-12 col-ml-8 col-ml-offset-2">
 					
 					<h1><?php single_post_title( '' ); ?></h1>
-					<p class="lede">Silicon Valley business strategist Jenny Blake puts forward a pretty convincing case as to why.</p>
+					<p class="lede">
+
+						<?php the_field('lede_paragraph'); ?>
+
+						<!--Silicon Valley business strategist Jenny Blake puts forward a pretty convincing case as to why.-->
+							
+						</p>
 
 				</div>
 
