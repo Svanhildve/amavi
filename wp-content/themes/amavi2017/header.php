@@ -45,11 +45,23 @@
 		          // Toggle the Body Class "show-nav"
 		          $('body').toggleClass('show-search');
 
+		          document.body.scrollTop = document.documentElement.scrollTop = 0;
+
 		          // Deactivate the default behavior of going to the next page on click 
 		          return false;
 
 		    });
+
+
+		    $( document ).on( 'keydown', function ( e ) {
+			    if ( e.keyCode === 27 ) {
+			        $('body').toggleClass('show-search');
+			    }
+			});
+
 		});
+
+
 
 
 	</script>
@@ -93,7 +105,8 @@
 		<div class="header__search col-m-3">
 			
 			<div class="header__search__link">
-				<a href="#" class="search-link">Search</a>
+				<a href="#" class="search-link">
+					<div class="search-link__icon"></div>Search</a>
 			</div>
 
 
@@ -114,8 +127,9 @@
 		</div>
 
 		<div class="search-overlay__close">
-			<div class="search-overlay__close-lines"></div>
-			<a href="#" class="search-link">Close</a>
+			<a href="#" class="search-link">
+				<div class="search-overlay__close-lines"></div>Close
+			</a>
 		</div>
 		
 	</div>

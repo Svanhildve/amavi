@@ -68,18 +68,41 @@
 }
 
 .search-overlay__close {
-	display: inline-block;
+	display: block;
 	position: absolute;
-	right: 15px;
+	right: 40px;
 	top: 40px;
+	font-size: 15px;
+	font-weight: bold;
+	z-index: 100;
+
+	&:hover {
+
+		.search-overlay__close-lines {
+
+			&:before, &:after {
+				background: #007175;
+			}
+
+		}
+
+	}
 }
 
 .search-overlay__close-lines {
 
+	display: inline-block;
+    position: relative;
+ 	vertical-align: middle;
+ 	padding-bottom: 5px;
+ 	margin-right: 20px;
+
 	&:before, &:after {
 		content: "";
 		position: absolute;
-		width: 22px;
+		top: 0;
+		left: 0;
+		width: 14px;
 		height: 2px;
 		background: $black;
 		transform-origin: 50% 50%;
