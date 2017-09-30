@@ -55,7 +55,9 @@
 
 		    $( document ).on( 'keydown', function ( e ) {
 			    if ( e.keyCode === 27 ) {
-			        $('body').toggleClass('show-search');
+			    	if($('.show-search').is(':visible')) {
+			      	  $('body').toggleClass('show-search');
+			      	}
 			    }
 			});
 
