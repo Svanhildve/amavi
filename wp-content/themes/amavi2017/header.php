@@ -42,10 +42,18 @@
 		    // Bind a click event to anything with the class "search-link"
 		    $('.search-link').click(function() {
 		        
-		          // Toggle the Body Class "show-nav"
+		          // Toggle the Body Class "show-search"
 		          $('body').toggleClass('show-search');
 
-		          document.body.scrollTop = document.documentElement.scrollTop = 0;
+		      //    $('.search-input').focus();
+
+		      		setTimeout( function(){ $( '.search-input' ).focus(); }, 200 );
+
+		        	document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+
+		          
+
 
 		          // Deactivate the default behavior of going to the next page on click 
 		          return false;
@@ -54,16 +62,20 @@
 
 
 		    $( document ).on( 'keydown', function ( e ) {
+
 			    if ( e.keyCode === 27 ) {
+
 			    	if($('.show-search').is(':visible')) {
+
 			      	  $('body').toggleClass('show-search');
+
 			      	}
 			    }
-			});
+			})
 
 		});
 
-
+		
 
 
 	</script>
