@@ -1,82 +1,102 @@
 <?php
 
 // check if the flexible content field has rows of data
-if( have_rows('flexible_content') ):
+if( have_rows('single_blocks') ):
 
 	// loop through the rows of data
-	while ( have_rows('flexible_content') ) : the_row();
+	while ( have_rows('single_blocks') ) : the_row();
 
-		if( get_row_layout() == 'full_width_image' ): 
+		if( get_row_layout() == 'wide_image' ): 
 
-			$image = get_sub_field( 'full_width_image_field' ); 
+			$image = get_sub_field( 'wide_image_field' ); 
 
 			if ( $image ) { ?>
 
-				<div class="row">
-					<div class="col-s-12 full-width no-space">
-						<img src="<?php echo esc_url( $image ); ?>" class="full-width-image">
+				<div class="row wrapper">
+
+					<div class="picture-wide col-s-12">
+
+						<img src="<?php echo esc_url( $image ); ?>" class="picture-wide__image" />
+
 					</div>
+
 				</div>
 
 			<?php
 			} ; // End if $image
 
-		elseif( get_row_layout() == 'content_area' ): 
+		elseif( get_row_layout() == 'content' ): 
 
-			$content = get_sub_field( 'content_area_field' ); 
+			$content = get_sub_field( 'content_field' ); 
 
 			if ( $content ) { ?>
 
-				<div class="row wrapper">
-					<div class="col-m-1 col-l-2"></div>
-					<div class="col-s-12 col-m-10 col-l-8">
-						<div class="content-area base-spacing-top base-spacing-bottom-x2">
-						<?php echo $content; ?>
-						</div>
+				<div class="row">
+
+					<div class="single-post__article col-s-12 col-ml-8 col-ml-offset-2">			
+										
+						<?php echo $content; ?>		
+
 					</div>
-					<div class="col-m-1 col-l-2"></div>
+
 				</div>
 
 			<?php
-			} ; // End if $image
+			} ; // End if $content
 
-		elseif( get_row_layout() == 'wide_image' ): 
 
-			$imagewide = get_sub_field( 'wide_image_field' ); 
+		elseif( get_row_layout() == 'blockquote' ): 
 
-			if ( $imagewide ) { ?>
+			$blockquote = get_sub_field( 'blockquote_field' ); 
+
+			if ( $blockquote ) { ?>
 
 				<div class="row">
-					<div class="col-m-1"></div>
-					<div class="col-s-12 col-m-10">
-						<img src="<?php echo esc_url( $imagewide ); ?>" class="full-width-image">
+
+					<div class="blockquote col-s-12 col-ml-10 col-ml-offset-1">
+
+						<p><?php echo $blockquote; ?></p>
+
 					</div>
-					<div class="col-m-1"></div>
+
 				</div>
 
 			<?php
-			} ; // End if $image
+			} ; // End if $content
 
 
-		elseif( get_row_layout() == 'two_images_full_width' ): 
+		elseif( get_row_layout() == 'two_images' ): 
 
-			$imageone = get_sub_field( 'image_one' ); 
-			$imagetwo = get_sub_field( 'image_two' ); 
+			$imageone = get_sub_field( 'image_one_field' ); 
+			$imagetwo = get_sub_field( 'image_two_field' ); 
 
 
 			if ( $imageone && $imagetwo ) { ?>
 
-				<div class="row">
-					<div class="col-s-12 col-m-6 full-width no-space">
-						<img src="<?php echo esc_url( $imageone ); ?>" class="full-width-image">
+
+				<div class="row wrapper">
+
+					<div class="two-pictures">
+
+						<div class="two-pictures-one col-s-12 col-ml-8">
+							
+							<img src="<?php echo esc_url( $imageone ); ?>" class="two-pictures__image" />
+
+						</div>
+
+						<div class="two-pictures-two col-s-12 col-ml-4">
+
+							<img src="<?php echo esc_url( $imagetwo ); ?>" class="two-pictures__image" />
+
+						</div>
+
 					</div>
-					<div class="col-s-12 col-m-6 full-width no-space">
-						<img src="<?php echo esc_url( $imagetwo ); ?>" class="full-width-image">
-					</div>
+
 				</div>
 
 			<?php
 			} ; // End if $image
+		
 
 		elseif( get_row_layout() == 'two_images_wide' ): 
 

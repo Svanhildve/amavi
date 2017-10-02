@@ -57,15 +57,10 @@
 
 				</div>
 
-				<?php get_template_part( 'picture-wide' ); ?>
+				<?php get_template_part( 'buildable' ); ?>
 
-				<?php get_template_part( 'two-pictures' ); ?>
-
-				<div class="blockquote col-s-12 col-ml-10 col-ml-offset-1">
-
-					<p>However, instead of fearing it, Jenny urges us to embrace this accelerated pace of change. “You can learn to enjoy calculated risk and uncertainty in exchange for adventure, flexibility, freedom, and opportunity,” she writes.</p>
-
-				</div>
+				
+				
 
 			<?php endwhile; else: ?>
 
