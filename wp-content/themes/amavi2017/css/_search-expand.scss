@@ -41,6 +41,8 @@
 
 
 .show-search {
+	overflow: hidden;
+
 	.search-overlay {
 		opacity: 1;
 		visibility: visible;
@@ -68,13 +70,22 @@
 }
 
 .search-overlay__close {
-	display: block;
-	position: absolute;
+/*	display: block;
+	position: relative;
 	right: 40px;
 	top: 40px;
 	font-size: 15px;
 	font-weight: bold;
+	z-index: 100;*/
+
+	display: inline;
+	float: right;
+	padding: calc-rem(26) calc-rem(25) calc-rem(15) calc-rem(15);;
+	position: relative;
 	z-index: 100;
+	font-weight: bold;
+	font-size: 15px;
+	text-align: right;
 
 	&:hover {
 
@@ -149,9 +160,9 @@
 	font-family: $display-type;
 	margin: 10px 0;
 	display: inline-block;
-	vertical-align: bottom;
-	margin-right: 20px;
-	width: 100%;
+	vertical-align: middle;
+	margin-right: 10px;
+	width: calc(100% - 90px);
 }
 
 .search-input:focus {
@@ -167,4 +178,70 @@
 	font-family: $display-type;
 	font-weight: bold;
 	font-size: calc-rem(14);
+	display: block;
+}
+
+/*.search-submit {
+	position: relative;
+	display: inline-block;
+	border-radius: 30px;
+	height: 20px;
+	width: 20px;
+	border: 3px solid $black;
+   	vertical-align: middle;
+   	background: transparent;
+  
+	&:after {
+		content: "";
+		height: 3px;
+		width: 13px;
+		background: $black;
+		position: absolute;
+		top: 16px;
+		left: 12px;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+ 		-o-transform: rotate(45deg);
+
+
+	}
+}*/
+
+.search-submit {
+	width: 60px;
+	height: 60px;
+   	vertical-align: middle;
+   	border: 0;
+   	background: transparent;
+  
+   	&:before {
+   		content: "";
+   		height: 20px;
+		width: 20px;
+		background: transparent;
+		position: relative;
+		border: 3px solid $black;
+		border-radius: 30px;
+		display: inline-block;
+		float: left;
+		left: 10px;
+   	}
+
+	&:after {
+		content: "";
+		height: 3px;
+		width: 16px;
+		background: $black;
+		position: relative;
+		left: 30px;
+		float: left;
+		transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+ 		-o-transform: rotate(45deg);
+
+
+	}
 }

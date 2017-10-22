@@ -9,9 +9,9 @@
 					<div class="col-s-12">
 					
 						<h1 class="h1--page"><?php single_post_title( '' ); ?></h1>
-						<p class="lede">
+						<p class="lead">
 
-							<?php the_field('lede_paragraph'); ?>
+							<?php the_field('lead_paragraph'); ?>
 							
 						</p>
 

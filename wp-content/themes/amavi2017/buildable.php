@@ -67,11 +67,16 @@ if( have_rows('single_blocks') ):
 
 		elseif( get_row_layout() == 'two_images' ): 
 
-			$imageone = get_sub_field( 'image_one_field' ); 
-			$imagetwo = get_sub_field( 'image_two_field' ); 
+			$largeimage = get_sub_field( 'large_image_field' ); 
+			$smallimage = get_sub_field( 'small_image_field' ); 
+
+			$largeleft = get_sub_field('image_placement') == "large_image_left";
+			$largeright = get_sub_field('image_placement') == "large_image_right";
+
+			$alt_text = get_post_meta($largeimage , '_wp_attachment_image_alt', true);
 
 
-			if ( $imageone && $imagetwo ) { ?>
+			if ( $largeimage && $smallimage && $largeleft ) { ?>
 
 
 				<div class="row wrapper">
@@ -80,13 +85,13 @@ if( have_rows('single_blocks') ):
 
 						<div class="two-pictures-one col-s-12 col-ml-8">
 							
-							<img src="<?php echo esc_url( $imageone ); ?>" class="two-pictures__image" />
+							<img src="<?php echo esc_url( $largeimage ); ?>" class="two-pictures__image" alt="<?php echo $alt_text; ?>" />
 
 						</div>
 
 						<div class="two-pictures-two col-s-12 col-ml-4">
 
-							<img src="<?php echo esc_url( $imagetwo ); ?>" class="two-pictures__image" />
+							<img src="<?php echo esc_url( $smallimage ); ?>" class="two-pictures__image" />
 
 						</div>
 
@@ -96,91 +101,32 @@ if( have_rows('single_blocks') ):
 
 			<?php
 			} ; // End if $image
-		
 
-		elseif( get_row_layout() == 'two_images_wide' ): 
-
-			$imageonewide = get_sub_field( 'image_one_wide' ); 
-			$imagetwowide = get_sub_field( 'image_two_wide' ); 
+			if ( $largeimage && $smallimage && $largeright ) { ?>
 
 
-			if ( $imageonewide && $imagetwowide ) { ?>
+				<div class="row wrapper">
 
-				<div class="row">
-					<div class="col-m-1"></div>
-					<div class="col-s-12 col-m-10">
-						<img src="<?php echo esc_url( $imageonewide ); ?>" class="full-width-image-2"><img src="<?php echo esc_url( $imagetwowide ); ?>" class="full-width-image-2">
+					<div class="two-pictures">
+
+						<div class="two-pictures-one col-s-12 col-ml-8">
+							
+							<img src="<?php echo esc_url( $smallimage ); ?>" class="two-pictures__image" />
+
+						</div>
+
+						<div class="two-pictures-two col-s-12 col-ml-4">
+
+							<img src="<?php echo esc_url( $largeimage ); ?>" class="two-pictures__image" />
+
+						</div>
+
 					</div>
-					<div class="col-m-1"></div>
-				</div>
 
-				<!--<div class="row">
-					<div class="col-m-1"></div>
-					<div class="col-s-12 col-m-5 full-width">
-						<img src="<?php echo esc_url( $imageonewide ); ?>" class="full-width-image">
-					</div>
-					<div class="col-s-12 col-m-5 full-width">
-						<img src="<?php echo esc_url( $imagetwowide ); ?>" class="full-width-image">
-					</div>
-					<div class="col-m-1"></div>
-				</div>-->
-
-			<?php
-			} ; // End if $image
-
-
-
-		elseif( get_row_layout() == 'image_+_text' ): 
-
-			$imagealternating = get_sub_field( 'image_alternating' ); 
-			$textalternating = get_sub_field( 'text_alternating' ); 
-			$imageleft = get_sub_field('alternating') == "image_left";
-			$imageright = get_sub_field('alternating') == "image_right";
-			$overlapping = get_sub_field('overlapping');
-
-			if ( $overlapping ) {
-
-				if( in_array('overlap_bottom', $overlapping) ) {
-
-					$overlappingclass = "overlapping";
-				
-				}
-
-			}
-
-
-			if ( $imagealternating && $textalternating && $imageleft ) { ?>
-
-				<div class="row wrapper base-spacing-overall-x2">
-					<div class="col-s-12 col-m-6 <?php echo $overlappingclass; ?> alternating-image">
-						<img src="<?php echo esc_url( $imagealternating ); ?>">
-					</div>
-					<div class="col-m-1"></div>
-					<div class="col-s-12 col-m-5">
-						<div class="alternating-text"><?php echo $textalternating; ?></div>
-					</div>
-				</div>
-
-			<?php
-			}  // End if $image
-
-			elseif ( $imagealternating && $textalternating && $imageright ) { ?>
-
-				<div class="row wrapper base-spacing-overall-x2 <?php echo $overlappingclass; ?>">
-					
-					<div class="col-s-12 col-m-5 <?php echo $overlappingclass; ?>">
-						<div class="alternating-text"><?php echo $textalternating; ?></div>
-					</div>
-					<div class="col-m-1"></div>
-					<div class="col-s-12 col-m-6 <?php echo $overlappingclass; ?> alternating-image" style="background-image:url('<?php echo esc_url( $imagealternating ); ?>')">
-						<!--<img src="<?php echo esc_url( $imagealternating ); ?>">-->
-					</div>
 				</div>
 
 			<?php
 			} ; // End if $image
-
-			
 
 
 		endif;

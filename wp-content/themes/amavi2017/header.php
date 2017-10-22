@@ -129,22 +129,28 @@
 	</div>
 
 	<div class="search-overlay">
+
+		<div class="row large-wrapper">
+			<div class="col-m-3 col-m-offset-9">
+				<div class="search-overlay__close">
+					<a href="#" class="search-link">
+						<div class="search-overlay__close-lines"></div>Close
+					</a>
+				</div>
+			</div>
+		</div>
 		
 		<div class="row">
 			<div class="search-overlay__content col-s-12">
 				<div class="search-overlay__form row wrapper">
-					<div class="col-m-offset-2 col-m-8">
+					<div class="col-m-offset-1 col-m-10">
 						<?php get_search_form(); ?>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="search-overlay__close">
-			<a href="#" class="search-link">
-				<div class="search-overlay__close-lines"></div>Close
-			</a>
-		</div>
+
 		
 	</div>
 
