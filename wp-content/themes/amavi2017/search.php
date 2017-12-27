@@ -16,9 +16,10 @@
 					<div>Your search for <?php echo get_search_query(); ?> returned <?php echo $total_results ?> results.</div>
 
 					<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-						<label for="search-input" class="h2 h2--listing search-label">Search for content</label>
-						<input type="text" name="s" class="search-input" value="<?php the_search_query(); ?>">
+						<label for="search-input" class="search-label visuallyhidden">Search for content</label>
+						<input type="text" name="s" class="" value="<?php the_search_query(); ?>">
 						<button type="submit" class="button button--search">Search</button>
+						<button type="submit" class="button button--ghost">Search</button>
 					</form> 
 
 				</div>
@@ -39,10 +40,11 @@
 						<div>There were no results matching your search. Try searching for something else.</div>
 
 						<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-							<label for="search-input" class="h2 h2--listing search-label">Search for content</label>
-							<input type="text" name="s" class="search-input" value="<?php the_search_query(); ?>">
+							<label for="search-input" class="search-label visuallyhidden">Search for content</label>
+							<input type="text" name="s" class="" value="<?php the_search_query(); ?>">
 							<button type="submit" class="button button--search">Search</button>
-						</form> 
+							<button type="submit" class="button button--ghost">Search</button>
+						</form> 	 
 
 					</div>
 

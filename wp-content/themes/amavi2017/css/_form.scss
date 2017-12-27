@@ -1,0 +1,17 @@
+input {
+	font-size: calc-rem(16);
+	font-family: $display-type;
+	font-weight: 100;
+	line-height: 28px;
+	border: 1px $lightest-grey solid;
+	padding: calc-rem(10) calc-rem(14) calc-rem(6) calc-rem(14);
+
+	&:hover {
+		border: 1px solid #C8C8C8;
+	}
+
+	&:focus {
+		outline: none;
+		border: 1px solid #7FDEDD;
+	}
+}
