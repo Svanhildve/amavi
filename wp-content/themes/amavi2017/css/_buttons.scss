@@ -8,6 +8,8 @@
 	padding: calc-rem(17) calc-rem(25) calc-rem(14) calc-rem(25);	
 	display: inline-block;
 	background: #7FDEDD;
+	vertical-align: top;
+	cursor: pointer;
 
 	&:hover {
 		background: darken(#7FDEDD, 10%);

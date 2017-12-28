@@ -7,6 +7,7 @@ h1, .h1 {
 	font-size: calc-rem(40);
 	line-height: calc-rem(45);
 	margin-bottom: calc-rem(30);
+	font-weight: 500;
 
 	@media #{$breakpoint-md} {
 		font-size: calc-rem(70);
@@ -25,6 +26,11 @@ h1, .h1 {
 .h1--page {
 	text-align: center;
 	margin-top: 50px;
+}
+
+.h1--search {
+	@extend .h1--page;
+	margin-bottom: 5px;
 }
 
 h2, .h2 {

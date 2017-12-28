@@ -37,11 +37,20 @@ function my_post_queries( $query ) {
     }
 
     if(is_search()){
-      $query->set('posts_per_page', 3);
+      $query->set('posts_per_page', 2);
     }
 
   }
 }
 add_action( 'pre_get_posts', 'my_post_queries' );
+
+function exclude_pages_from_search($query) {
+    if ( $query->is_main_query() && is_search() ) {
+        $query->set( 'post_type', 'post' );
+    }
+    return $query;
+}
+add_filter( 'pre_get_posts','exclude_pages_from_search' );
+
 
 ?>
