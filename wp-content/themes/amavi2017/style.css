@@ -949,8 +949,10 @@ input {
       width: 270px; } }
 
 .search-page__heading {
-  text-align: center;
-  margin-bottom: 3.8888888889rem; }
+  text-align: center; }
+  @media only screen and (min-width: 768px) {
+    .search-page__heading {
+      margin-bottom: 3.8888888889rem; } }
 
 /* components */
 .meta {
@@ -993,8 +995,10 @@ input {
   overflow: hidden; }
 
 .listing {
-  margin-top: 2.5rem;
   margin-bottom: 2.5rem; }
+  @media only screen and (min-width: 768px) {
+    .listing {
+      margin-top: 2.5rem; } }
 
 .listing__item {
   padding-bottom: 0.5555555556rem; }

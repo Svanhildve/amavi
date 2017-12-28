@@ -16,5 +16,8 @@
 
 .search-page__heading {
 	text-align: center;
-	margin-bottom: calc-rem(70);
+
+	@media #{$breakpoint-md} {
+		margin-bottom: calc-rem(70);
+	}
 }

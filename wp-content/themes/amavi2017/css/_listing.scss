@@ -16,8 +16,11 @@
 }
 
 .listing {
-	margin-top: calc-rem(45);
 	margin-bottom: calc-rem(45);
+
+	@media #{$breakpoint-md} {
+		margin-top: calc-rem(45);
+	}
 }
 
 .listing__item {
