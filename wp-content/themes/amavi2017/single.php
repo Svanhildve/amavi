@@ -4,7 +4,11 @@
 
 	<div class="single-post__hero row large-wrapper">
 
-		<div class="single-post__hero-image col-s-12" style="background-image:url('<?php echo wp_get_attachment_url(get_post_thumbnail_id() );?>')""></div>
+		<?php $img_id = get_post_thumbnail_id(get_the_ID()); ?>
+
+		<!--<?php $alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true); ?>-->
+
+		<div class="single-post__hero-image col-s-12" style="background-image:url('<?php echo wp_get_attachment_url($img_id );?>'")></div>
 
 	</div>
 

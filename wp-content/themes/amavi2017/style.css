@@ -1176,7 +1176,10 @@ h1 {
     font-size: 3.3333333333rem;
     padding: 0; }
     .search-overlay .search-input:hover {
-      border-bottom: 2px solid #C8C8C8; }
+      border-bottom: 2px solid #C8C8C8;
+      border-top: 0;
+      border-left: 0;
+      border-right: 0; }
     .search-overlay .search-input:focus {
       outline: none;
       border-bottom: 2px solid #7FDEDD;

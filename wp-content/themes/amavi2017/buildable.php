@@ -8,7 +8,15 @@ if( have_rows('single_blocks') ):
 
 		if( get_row_layout() == 'wide_image' ): 
 
+			// $img_id = get_post_thumbnail_id(get_the_ID()); 
+			// $alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true); 
+			// 
+
+			
+
 			$image = get_sub_field( 'wide_image_field' ); 
+			$args = array( 'class' => 'picture-wide__image' );
+			$alt_text = get_post_meta(get_sub_field( 'wide_image_field' ), '_wp_attachment_image_alt', true);
 
 			if ( $image ) { ?>
 
@@ -16,7 +24,9 @@ if( have_rows('single_blocks') ):
 
 					<div class="picture-wide col-s-12">
 
-						<img src="<?php echo esc_url( $image ); ?>" class="picture-wide__image" />
+						<?php echo wp_get_attachment_image( $image, 'full', false, $args ); ?>
+
+						<!--<img src="<?php echo esc_url( $image ); ?>" class="picture-wide__image" alt="<?php echo $alt_text; ?>" />-->
 
 					</div>
 

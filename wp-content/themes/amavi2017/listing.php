@@ -6,7 +6,11 @@
 
 					<div class="listing__thumbnail col-s-12 col-m-6 col-ml-5 col-l-4">
 						<div class="listing__thumbnail-wrap">
-							<a href="<?php the_permalink(); ?>"><div class="listing__thumbnail-image" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>');">
+
+							<?php $img_id = get_post_thumbnail_id(get_the_ID()); ?>
+							<?php $alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true); ?>
+
+							<a href="<?php the_permalink(); ?>" aria-label="Read article"><div class="listing__thumbnail-image" style="background-image:url('<?php echo wp_get_attachment_url($img_id );?>');" alt="<?php echo $alt_text; ?>">
 						</div></a>
 						</div>
 					</div>

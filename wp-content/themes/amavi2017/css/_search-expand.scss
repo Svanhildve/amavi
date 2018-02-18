@@ -32,6 +32,9 @@
 
 		&:hover {
 			border-bottom: 2px solid #C8C8C8;
+			border-top: 0;
+			border-left: 0;
+			border-right: 0;
 		}
 
 		&:focus {

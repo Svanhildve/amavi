@@ -40,10 +40,10 @@
 					</div>
 
 					<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-						<label for="search-input" class="search-label visuallyhidden">Search for content</label>
-						<input type="text" name="s" class="search-page-input" value="<?php the_search_query(); ?>">
+						<label for="search-page-input" class="search-label visuallyhidden">Search for content</label>
+						<input type="text" name="s" id="search-page-input" class="search-page-input" value="<?php the_search_query(); ?>">
 						<button type="submit" class="button button--search">Search</button>
-						<!--<button type="submit" class="button button--ghost">Search</button>-->
+						
 					</form> 
 
 				</div>
