@@ -8,15 +8,7 @@ if( have_rows('single_blocks') ):
 
 		if( get_row_layout() == 'wide_image' ): 
 
-			// $img_id = get_post_thumbnail_id(get_the_ID()); 
-			// $alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true); 
-			// 
-
-			
-
 			$image = get_sub_field( 'wide_image_field' ); 
-			$args = array( 'class' => 'picture-wide__image' );
-			$alt_text = get_post_meta(get_sub_field( 'wide_image_field' ), '_wp_attachment_image_alt', true);
 
 			if ( $image ) { ?>
 
@@ -24,9 +16,7 @@ if( have_rows('single_blocks') ):
 
 					<div class="picture-wide col-s-12">
 
-						<?php echo wp_get_attachment_image( $image, 'full', false, $args ); ?>
-
-						<!--<img src="<?php echo esc_url( $image ); ?>" class="picture-wide__image" alt="<?php echo $alt_text; ?>" />-->
+						<img src="<?php echo $image['url']; ?>" class="picture-wide__image" alt="<?php echo $image['alt']; ?>" />
 
 					</div>
 
@@ -94,14 +84,14 @@ if( have_rows('single_blocks') ):
 					<div class="two-pictures">
 
 						<div class="two-pictures-one col-s-12 col-ml-8">
-							
-							<img src="<?php echo esc_url( $largeimage ); ?>" class="two-pictures__image" alt="<?php echo $alt_text; ?>" />
+
+							<img src="<?php echo $largeimage['url']; ?>" class="two-pictures__image" alt="<?php echo $largeimage['alt']; ?>" />
 
 						</div>
 
 						<div class="two-pictures-two col-s-12 col-ml-4">
 
-							<img src="<?php echo esc_url( $smallimage ); ?>" class="two-pictures__image" />
+							<img src="<?php echo $smallimage['url']; ?>" class="two-pictures__image" alt="<?php echo $smallimage['alt']; ?>" />
 
 						</div>
 
@@ -121,13 +111,13 @@ if( have_rows('single_blocks') ):
 
 						<div class="two-pictures-one col-s-12 col-ml-8">
 							
-							<img src="<?php echo esc_url( $smallimage ); ?>" class="two-pictures__image" />
+							<img src="<?php echo $smallimage['url']; ?>" class="two-pictures__image" alt="<?php echo $smallimage['alt']; ?>" />
 
 						</div>
 
 						<div class="two-pictures-two col-s-12 col-ml-4">
 
-							<img src="<?php echo esc_url( $largeimage ); ?>" class="two-pictures__image" />
+							<img src="<?php echo $largeimage['url']; ?>" class="two-pictures__image" alt="<?php echo $largeimage['alt']; ?>" />
 
 						</div>
 
