@@ -488,7 +488,7 @@ h1, .h1 {
   font-size: 2.2222222222rem;
   line-height: 2.5rem;
   margin-bottom: 1.6666666667rem;
-  font-weight: 500; }
+  font-weight: 600; }
   @media only screen and (min-width: 768px) {
     h1, .h1 {
       font-size: 3.8888888889rem;
@@ -519,8 +519,8 @@ h2, .h2 {
       line-height: 1.7777777778rem; } }
 
 .h2--featured-large {
-  font-size: 1.9444444444rem;
-  line-height: 1.9444444444rem;
+  font-size: 1.6666666667rem;
+  line-height: 1.5555555556rem;
   text-transform: uppercase;
   font-weight: 900;
   margin-top: 0.5555555556rem; }
@@ -596,17 +596,55 @@ h1 a:hover, h1 a:active, h2 a:hover, h2 a:active, h3 a:hover, h3 a:active, h4 a:
 
 .cta-link {
   font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;
-  font-size: 0.8888888889rem;
+  font-size: 0.7777777778rem;
   font-weight: 700;
-  box-shadow: inset 0 -0.06em 0 0 #fff, inset 0 -0.1em 0 0 #87D8D7;
-  text-shadow: 0.04em 0 #fff, -0.04em 0 #fff, 1.5px 0 #fff, -1.5px 0 #fff;
-  padding-bottom: 5px;
-  transition: .2s; }
+  display: inline-block; }
+  .cta-link:before {
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 12px;
+    background-color: #007175;
+    vertical-align: middle;
+    position: relative;
+    float: right;
+    left: 4px;
+    top: 12px; }
+  .cta-link:after {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-top: 1px solid #007175;
+    border-right: 1px solid #007175;
+    border-bottom: 0;
+    border-left: 0;
+    position: relative;
+    float: right;
+    left: 16px;
+    right: 0;
+    top: 10px;
+    transform: rotate(45deg); }
   .cta-link:hover {
     box-shadow: inset 0 -0.06em 0 0 #fff, inset 0 -0.1em 0 0 #007175;
     text-shadow: 0.04em 0 #fff, -0.04em 0 #fff, 1.5px 0 #fff, -1.5px 0 #fff;
     text-decoration: none; }
 
+/*.cta-link {
+	font-family: $display-type;
+	font-size: calc-rem(16);
+	font-weight: 700;
+	box-shadow: inset 0 -0.06em 0 0 #fff, inset 0 -0.1em 0 0 $light-teal;
+	text-shadow: 0.04em 0 #fff, -0.04em 0 #fff, 1.5px 0 #fff, -1.5px 0 #fff;
+	padding-bottom: 5px;
+	transition: .2s;
+
+	&:hover {
+		box-shadow: inset 0 -0.06em 0 0 #fff, inset 0 -0.1em 0 0 #007175;
+		text-shadow: 0.04em 0 #fff, -0.04em 0 #fff, 1.5px 0 #fff, -1.5px 0 #fff;
+		text-decoration: none;
+	}
+}*/
 h2 a {
   box-shadow: none;
   text-shadow: none; }
