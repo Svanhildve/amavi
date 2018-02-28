@@ -14,23 +14,24 @@
 }
 
 .featured-hero__teaser {
-	
-	
+
+	text-align: center;	
 	color: $black;
 
 	@media #{$breakpoint-md} {
+		
+	}
+
+	@media #{$breakpoint-ml} {
+		text-align: left;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		color: $white;
-		left: 30px;
-
-		h1 a {
-			color: $white;
-		}
+		
 	}
 
 	@media #{$breakpoint-lg} {
+		left: 30px;
 		color: $black;
 		left: 0;
 
