@@ -134,3 +134,106 @@ function amavi_get_home_posts_array( $featured_position = 4 ) {
     return $home_posts;
 
 }
+
+
+
+
+
+/*
+* Get posts related to a specific one
+ */
+function amavi_get_related_posts( $args = array(), $id = null ) {
+
+  if ( empty( $args['post_type'] ) ) $args['post_type'] = 'post';
+  if ( empty( $args['taxonomy'] ) ) $args['taxonomy'] = 'category';
+  if ( !isset( $args['count'] ) || empty( $args['count'] ) ) $args['count'] = 3;
+  if ( !isset( $args['randomise'] ) ) $args['randomise'] = true;
+  if ( empty( $id ) ) $id = get_the_ID();
+
+  $categories = get_the_terms( $id, $args['taxonomy'] );
+  $category_ids = array();
+
+  // Loop through taxonomy 'categories' and make an array of IDs
+  foreach ( $categories as $category ) {
+
+    $category_ids[] = $category->term_id;
+
+  }
+
+  $qargs = array(
+
+    'post_type' => $args['post_type'],
+    'post__not_in' => array( $id ),
+    'tax_query' => array(
+      array(
+        'taxonomy' => $args['taxonomy'],
+        'field'    => 'term_id',
+        'terms'    => $category_ids,
+      ),
+    ),
+    'posts_per_page' => ( $args['count'] * 5 ),
+
+  );
+
+  $q = new WP_Query( $qargs );
+
+  // Set up an array of posts
+  $posts = array();
+
+  // The Loop
+  if ( $q->have_posts() ) {
+
+    while ( $q->have_posts() ) {
+
+      $q->the_post();
+      $posts[] = get_the_ID();
+
+    }
+
+    wp_reset_postdata();
+
+  }
+
+  // Check to see if we need more posts, cos there aren't enough related within this category
+  if ( count( $posts ) < $args['count'] ) {
+
+    $exclude_posts = $posts;
+    $exclude_posts[] = $id;
+
+    $qargs = array(
+
+      'post_type' => $args['post_type'],
+      'post__not_in' => $exclude_posts,
+      'posts_per_page' => ( ( $args['count'] * 5 ) - count( $posts ) ),
+
+    );
+
+    $q = new WP_Query( $qargs );
+
+    // The Loop
+    if ( $q->have_posts() ) {
+
+      while ( $q->have_posts() ) {
+
+        $q->the_post();
+        $posts[] = get_the_ID();
+
+      }
+
+      wp_reset_postdata();
+
+    }
+
+  }
+
+  // Do we want these randomised?
+  if ( $args['randomise'] ) {
+
+    // Shuffle all we have to give some variety
+    shuffle( $posts );
+
+  }
+
+  return array_slice( $posts, 0, $args['count'] );
+
+}
