@@ -6,70 +6,66 @@ Template Name: Home
 
 <?php get_header(); ?>
 
-	<?php get_template_part( 'featured-hero' ); ?>
+	<?php
 
-<!--	<?php get_template_part( 'listing-grid' ); ?>
+		amavi_set_home_hero_data();
+		get_template_part( 'partials/featured-hero' );
 
-	<?php get_template_part( 'featured-article' ); ?> -->
+	?>
 
+	<div class="listing  row  wrapper">
 
-	<div class="listing">
+		<?php
 
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			$featured_post_position = 4;
+			$posts = amavi_get_home_posts_array( $featured_post_position ); ?>
 
-			<div class="listing__item row wrapper">
+		<?php if ( !empty( $posts ) ) { ?>
 
-				<div class="listing__thumbnail col-s-12 col-pm-6 col-m-6 col-ml-5 col-l-4">
-					<div class="listing__thumbnail-wrap">
+		<?php
 
-						<?php $img_id = get_post_thumbnail_id(get_the_ID()); ?>
-						<!--<?php $alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true); ?>-->
+			$counter = 1;
 
-						<a href="<?php the_permalink(); ?>" aria-label="Read article"><div class="listing__thumbnail-image" style="background-image:url('<?php echo wp_get_attachment_url($img_id );?>');">
-					</div></a>
-					</div>
-				</div>
-				
-				<div class="listing__teaser col-s-12 col-pm-6 col-m-6 col-ml-7 col-l-8">
+			foreach ( $posts as $post ) {
 
-					<div class="meta">
-				
-						<div class="meta__date">
+				setup_postdata( $post );
 
-							<?php echo get_the_date(); ?>
-								
-						</div>
-						
-						<div class="meta__category">
+				// The first few posts! (before featured)
+				if ( $counter < $featured_post_position ) {
 
-							/ <?php the_category(', '); ?>
+					get_template_part( 'partials/listing-grid' );
 
-						</div>
+				// Our featured post
+				} elseif ( $counter == $featured_post_position ) {
 
-					</div>
+					get_template_part( 'partials/featured-article' );
 
-					<h2 class="h2 h2--listing"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				// The rest of the listing
+				} else {
 
-					<div class="excerpt"><?php the_excerpt(); ?></div>
+					get_template_part( 'partials/listing-slat' );
 
-				</div>		
+				}
 
-			</div>
+				$counter++;
 
-		<?php endwhile; ?>
+			}
+
+			wp_reset_postdata();
+
+		?>
 
 	</div>
 
-	<?php else: ?>
-			
+	<?php } else { ?>
+
 	<div class="row wrapper listing--empty">
 		<div class="col-s-12">
 			<p><?php _e('There are no posts'); ?></p>
 		</div>
 	</div>
-		
-	<?php endif; ?>
 
+	<?php } ?>
 
 	<div class="more-articles">
 		<span class="more-articles__link"><a href="#">Show me more articles</a></span>

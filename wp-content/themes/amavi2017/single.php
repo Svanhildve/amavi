@@ -18,13 +18,13 @@
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 				<div class="meta col-s-12 col-ml-8 col-ml-offset-2">
-					
+
 					<div class="meta__date">
 
 						<?php echo get_the_date(); ?>
-							
+
 					</div>
-					
+
 					<div class="meta__category">
 
 						 / <?php the_category(', '); ?>
@@ -33,43 +33,64 @@
 
 					<div class="meta__author">
 
-						/ <?php the_author(); ?> 
+						/ <?php the_author(); ?>
 
 					</div>
 
 				</div>
 
 				<div class="single-post__intro col-s-12 col-ml-8 col-ml-offset-2">
-					
+
 					<h1><?php single_post_title( '' ); ?></h1>
 					<p class="lead">
 
 						<?php the_field('lead_paragraph'); ?>
 
 						<!--Silicon Valley business strategist Jenny Blake puts forward a pretty convincing case as to why.-->
-							
+
 						</p>
 
 				</div>
 
 				<?php get_template_part( 'buildable' ); ?>
 
-				
-				
+
+
 
 			<?php endwhile; else: ?>
 
 				<p><?php _e('Sorry, no content! :( '); ?></p>
-			
+
 			<?php endif; ?>
 
 	</div>
 
-	<!--<div class="featured-posts row">
+	<?php $posts = amavi_get_related_posts(); ?>
 
-		 add code here 
+	<?php if ( !empty( $posts ) ) { ?>
 
-	</div>-->
+		<div class="featured-posts row wrapper">
+
+			<div class="listing">
+
+		<?php
+
+			foreach ( $posts as $post ) {
+
+				setup_postdata( $post );
+				get_template_part( 'partials/listing-grid' );
+
+			}
+
+			wp_reset_postdata();
+
+		?>
+
+		</div>
+
+	</div>
+
+	<?php } ?>
 
 </div>
 
