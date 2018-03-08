@@ -3,6 +3,7 @@
 	display: block;
 	background-position: 50% 50%;
 	background-size: cover;
+	transition: transform .4s cubic-bezier(.645,.045,.355,1),-webkit-transform .4s cubic-bezier(.645,.045,.355,1);
 
 	@media #{$breakpoint-md} {
 		
@@ -10,6 +11,11 @@
 
 	@media #{$breakpoint-lg} {
 		//margin-right: calc(-100vw / 2 + 1170px / 2);
+	}
+
+	&:hover {
+		transform: scale(1.15);
+		transition: transform .4s cubic-bezier(.645,.045,.355,1),-webkit-transform .4s cubic-bezier(.645,.045,.355,1);
 	}
 }
 
@@ -57,6 +63,17 @@
 		padding-right: 0;
 		
 	}
+
+
+}
+
+.featured-hero__thumbnail-wrap {
+	&:hover {
+		transform: scale(.95);
+		transition: transform .4s cubic-bezier(.645,.045,.355,1);
+	}
+
+	transition: transform .4s cubic-bezier(.645,.045,.355,1);
 }
 
 .featured-hero {

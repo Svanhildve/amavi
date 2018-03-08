@@ -1073,7 +1073,11 @@ input {
   padding-bottom: 65%;
   display: block;
   background-position: 50% 50%;
-  background-size: cover; }
+  background-size: cover;
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .featured-hero__thumbnail-image:hover {
+    transform: scale(1.15);
+    transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
 .featured-hero__teaser {
   text-align: center;
@@ -1097,6 +1101,12 @@ input {
   @media only screen and (min-width: 1170px) {
     .featured-hero__thumbnail {
       padding-right: 0; } }
+
+.featured-hero__thumbnail-wrap {
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .featured-hero__thumbnail-wrap:hover {
+    transform: scale(0.95);
+    transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
 .featured-hero {
   position: relative; }
