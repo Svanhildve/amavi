@@ -1,6 +1,7 @@
 .listing__thumbnail {
 	display: block;
 	overflow: hidden;
+	
 }
 
 .listing__thumbnail-image {
@@ -8,11 +9,26 @@
 	display: block;
 	background-position: 50% 50%;
 	background-size: cover;
-	transition: all 0.2s ease-in;
+	transition: transform .4s cubic-bezier(.645,.045,.355,1),-webkit-transform .4s cubic-bezier(.645,.045,.355,1);
+
+	&:hover {
+
+		transform: scale(1.15);
+		transition: transform .4s cubic-bezier(.645,.045,.355,1),-webkit-transform .4s cubic-bezier(.645,.045,.355,1);
+
+	}
 }
 
 .listing__thumbnail-wrap {
-	overflow: hidden
+	overflow: hidden;
+	transition: transform .4s cubic-bezier(.645,.045,.355,1),-webkit-transform .4s cubic-bezier(.645,.045,.355,1);
+
+	&:hover {
+
+		transform: scale(0.95);
+		transition: transform .4s cubic-bezier(.645,.045,.355,1),-webkit-transform .4s cubic-bezier(.645,.045,.355,1);
+
+	}
 }
 
 .listing__teaser .excerpt {
@@ -42,19 +58,7 @@
 	text-align: center;
 }
 
-.listing__item:hover {
 
-	.listing__thumbnail-image {
-		transform: scale(1.05);
-		transition: all 0.3s ease-out;
-	}
-
-
-	h2 a {
-		//color: blue;
-	}
-
-}
 
 .listing--grid {
 	.listing__thumbnail {
