@@ -14,9 +14,23 @@ setup_postdata( $post );
 		<div class="featured-hero__thumbnail-wrap">
 
 			<?php $img_id = get_post_thumbnail_id(get_the_ID()); ?>
-			<?php $alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true); ?>
 
-			<a href="<?php the_permalink(); ?>" aria-label="Read article"><div class="featured-hero__thumbnail-image" style="background-image:url('<?php echo wp_get_attachment_url( $img_id );?>');" alt="<?php echo $alt_text; ?>"></div></a>
+			<style>
+				@media screen and (max-width: 1023px) {
+					.featured-hero__thumbnail-image--<?php echo $img_id; ?> {
+						background-image:url('<?php echo wp_get_attachment_image_url( $img_id, 'large' ); ?>');
+					}
+				}
+				@media screen and (min-width: 1024px) {
+					.featured-hero__thumbnail-image--<?php echo $img_id; ?> {
+						background-image:url('<?php echo wp_get_attachment_image_url( $img_id, 'fullsize' ); ?>');
+
+						;
+					}
+				}
+			</style>
+
+			<a href="<?php the_permalink(); ?>" aria-label="Read article"><div class="featured-hero__thumbnail-image  featured-hero__thumbnail-image--<?php echo $img_id; ?>"></div></a>
 		</div>
 	</div>
 

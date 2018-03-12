@@ -2,20 +2,35 @@
 
 	<div class="col-s-12">
 
-		<div class="featured-article__image" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>');">
+		<style>
+			@media screen and (max-width: 1023px) {
+				.featured-article__image--<?php echo get_post_thumbnail_id(); ?> {
+					background-image:url('<?php echo wp_get_attachment_image_url( get_post_thumbnail_id(), 'large' ); ?>');
+				}
+			}
+			@media screen and (min-width: 1024px) {
+				.featured-article__image--<?php echo get_post_thumbnail_id(); ?> {
+					background-image:url('<?php echo wp_get_attachment_image_url( get_post_thumbnail_id(), 'fullsize' ); ?>');
+
+					;
+				}
+			}
+		</style>
+
+		<div class="featured-article__image  featured-article__image--<?php echo get_post_thumbnail_id(); ?>">
 
 			<div class="featured-article__teaser row wrapper">
 
 				<div class="col-pm-offset-1 col-m-offset-2 col-s-12 col-pm-10 col-m-8 featured-article__teaser-body">
 
 					<div class="meta">
-					
+
 						<div class="meta__date">
 
-							<?php echo get_the_date(); ?> / 
-								
+							<?php echo get_the_date(); ?> /
+
 						</div>
-						
+
 						<div class="meta__category">
 
 							<?php the_category(', '); ?>
