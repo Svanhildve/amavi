@@ -5,12 +5,12 @@
 		<style>
 			@media screen and (max-width: 1023px) {
 				.featured-article__image--<?php echo get_post_thumbnail_id(); ?> {
-					background-image:url('<?php echo wp_get_attachment_image_url( get_post_thumbnail_id(), 'large' ); ?>');
+					background-image:url('<?php echo wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium' ); ?>');
 				}
 			}
 			@media screen and (min-width: 1024px) {
 				.featured-article__image--<?php echo get_post_thumbnail_id(); ?> {
-					background-image:url('<?php echo wp_get_attachment_image_url( get_post_thumbnail_id(), 'fullsize' ); ?>');
+					background-image:url('<?php echo wp_get_attachment_image_url( get_post_thumbnail_id(), 'large' ); ?>');
 
 					;
 				}
@@ -21,7 +21,7 @@
 
 			<div class="featured-article__teaser row wrapper">
 
-				<div class="col-pm-offset-1 col-m-offset-2 col-s-12 col-pm-10 col-m-8 featured-article__teaser-body">
+				<div class="col-pm-offset-1 col-m-offset-3 col-s-12 col-pm-10 col-m-6 featured-article__teaser-body">
 
 					<div class="meta">
 

@@ -16,7 +16,7 @@ if( have_rows('single_blocks') ):
 
 					<div class="picture-wide col-s-12">
 
-						<?php echo wp_get_attachment_image( $image['ID'], 'fullsize', false, array( 'class' => 'picture-wide__image' ) ); ?>
+						<?php echo wp_get_attachment_image( $image['ID'], 'large', false, array( 'class' => 'picture-wide__image' ) ); ?>
 
 					</div>
 
@@ -85,13 +85,13 @@ if( have_rows('single_blocks') ):
 
 						<div class="two-pictures-one col-s-12 col-ml-8">
 
-							<?php echo wp_get_attachment_image( $largeimage['ID'], 'fullsize', false, array( 'class' => 'two-pictures__image' ) ); ?>
+							<?php echo wp_get_attachment_image( $largeimage['ID'], 'medium', false, array( 'class' => 'two-pictures__image' ) ); ?>
 
 						</div>
 
 						<div class="two-pictures-two col-s-12 col-ml-4">
 
-							<?php echo wp_get_attachment_image( $smallimage['ID'], 'fullsize', false, array( 'class' => 'two-pictures__image' ) ); ?>
+							<?php echo wp_get_attachment_image( $smallimage['ID'], 'medium', false, array( 'class' => 'two-pictures__image' ) ); ?>
 
 						</div>
 
@@ -111,13 +111,13 @@ if( have_rows('single_blocks') ):
 
 						<div class="two-pictures-one col-s-12 col-ml-8">
 
-							<?php echo wp_get_attachment_image( $smallimage['ID'], 'fullsize', false, array( 'class' => 'two-pictures__image' ) ); ?>
+							<?php echo wp_get_attachment_image( $smallimage['ID'], 'medium', false, array( 'class' => 'two-pictures__image' ) ); ?>
 
 						</div>
 
 						<div class="two-pictures-two col-s-12 col-ml-4">
 
-							<?php echo wp_get_attachment_image( $largeimage['ID'], 'fullsize', false, array( 'class' => 'two-pictures__image' ) ); ?>
+							<?php echo wp_get_attachment_image( $largeimage['ID'], 'medium', false, array( 'class' => 'two-pictures__image' ) ); ?>
 
 						</div>
 

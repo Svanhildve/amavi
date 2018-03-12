@@ -18,12 +18,12 @@ setup_postdata( $post );
 			<style>
 				@media screen and (max-width: 1023px) {
 					.featured-hero__thumbnail-image--<?php echo $img_id; ?> {
-						background-image:url('<?php echo wp_get_attachment_image_url( $img_id, 'large' ); ?>');
+						background-image:url('<?php echo wp_get_attachment_image_url( $img_id, 'medium' ); ?>');
 					}
 				}
 				@media screen and (min-width: 1024px) {
 					.featured-hero__thumbnail-image--<?php echo $img_id; ?> {
-						background-image:url('<?php echo wp_get_attachment_image_url( $img_id, 'fullsize' ); ?>');
+						background-image:url('<?php echo wp_get_attachment_image_url( $img_id, 'large' ); ?>');
 
 						;
 					}

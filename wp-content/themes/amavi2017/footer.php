@@ -55,5 +55,15 @@
 	
 <?php wp_footer(); ?> 
 
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+<script>
+
+window.sr = ScrollReveal();
+sr.reveal('.foo', { duration: 2000 }, 50);
+
+
+</script>
+
 </body>
 </html>

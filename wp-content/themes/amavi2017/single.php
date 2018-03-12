@@ -11,12 +11,12 @@
 		<style>
 			@media screen and (max-width: 1023px) {
 				.single-post__hero-image {
-					background-image:url('<?php echo wp_get_attachment_image_url( $img_id, 'large' ); ?>');
+					background-image:url('<?php echo wp_get_attachment_image_url( $img_id, 'medium' ); ?>');
 				}
 			}
 			@media screen and (min-width: 1024px) {
 				.single-post__hero-image {
-					background-image:url('<?php echo wp_get_attachment_image_url( $img_id, 'fullsize' ); ?>');
+					background-image:url('<?php echo wp_get_attachment_image_url( $img_id, 'large' ); ?>');
 				}
 			}
 		</style>
@@ -82,9 +82,13 @@
 
 	<?php if ( !empty( $posts ) ) { ?>
 
-		<div class="featured-posts row wrapper">
+	<div class="featured-posts row wrapper">
 
-			<div class="listing">
+		<div class="col-s-12">
+			<h2 class="featured-posts__headline">Further reading</h2>
+		</div>
+
+		<div class="listing">
 
 		<?php
 

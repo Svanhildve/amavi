@@ -1,8 +1,14 @@
-<div class="listing__item col-s-12 col-m-6 col-ml-4">
+<div class="listing__item listing--grid col-s-12 col-m-6 col-ml-4">
 
 	<div class="listing__thumbnail">
-		<a href="<?php the_permalink(); ?>"><div class="listing__thumbnail-image" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')">
-		</div></a>
+		<div class="listing__thumbnail-wrap">
+
+			<?php $img_id = get_post_thumbnail_id(get_the_ID()); ?>
+
+			<a href="<?php the_permalink(); ?>" aria-label="Read article">
+				<div class="listing__thumbnail-image" style="background-image:url('<?php echo wp_get_attachment_image_url( $img_id, 'thumbnail' ); ?>');"></div>
+			</a>
+		</div>
 	</div>
 
 	<div class="listing__teaser">
@@ -23,7 +29,7 @@
 
 		</div>
 
-		<h2 class="h2 h2--listing"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		<h2 class="h3 h3--listing"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
 		<div class="excerpt"><?php the_excerpt(); ?></div>
 

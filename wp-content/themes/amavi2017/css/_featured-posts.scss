@@ -1,0 +1,29 @@
+.featured-section {
+	background-color: #f5f5f5;
+}
+
+.featured-posts {
+	margin-bottom: calc-rem(100);
+}
+
+.featured-posts__headline {
+
+	font-size: calc-rem(14);
+	font-family: $display-type;
+	margin-bottom: calc-rem(5);
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: 500;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 2px;
+		width: calc-rem(20);
+		background-color: $black;
+		position: relative;
+		bottom: 3px;
+		margin-right: calc-rem(8);
+	}
+
+}

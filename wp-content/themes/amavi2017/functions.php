@@ -33,7 +33,7 @@ function my_post_queries( $query ) {
     }
 
     if(is_category()){
-      $query->set('posts_per_page', 2);
+      $query->set('posts_per_page', 10);
     }
 
     if(is_search()){

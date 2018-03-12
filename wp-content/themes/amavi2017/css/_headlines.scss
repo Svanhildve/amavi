@@ -10,8 +10,8 @@ h1, .h1 {
 	font-weight: 600;
 
 	@media #{$breakpoint-md} {
-		font-size: calc-rem(70);
-		line-height: calc-rem(75);
+		font-size: calc-rem(60);
+		line-height: calc-rem(70);
 		margin-bottom: calc-rem(30);
 	}
 }
@@ -70,6 +70,10 @@ h2, .h2 {
 .h2--featured-medium {
 	font-size: calc-rem(30);
 	line-height: calc-rem(30);
+
+	a {
+		color: $white;
+	}
 
 	@media #{$breakpoint-md} {
 		font-size: calc-rem(40);

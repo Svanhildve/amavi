@@ -30,6 +30,12 @@ h1, h2, h3, h4, h5, h6, .header, .search-overlay {
 	}
 }
 
+.h2--featured-medium {
+	a, a:visited {
+		color: $white;
+	}
+}
+
 .cta-link {
 	font-family: $display-type;
 	font-size: calc-rem(14);
