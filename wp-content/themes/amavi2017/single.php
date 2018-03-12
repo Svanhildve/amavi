@@ -8,7 +8,20 @@
 
 		<!--<?php $alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true); ?>-->
 
-		<div class="single-post__hero-image col-s-12" style="background-image:url('<?php echo wp_get_attachment_url($img_id );?>'")></div>
+		<style>
+			@media screen and (max-width: 1023px) {
+				.single-post__hero-image {
+					background-image:url('<?php echo wp_get_attachment_image_url( $img_id, 'large' ); ?>');
+				}
+			}
+			@media screen and (min-width: 1024px) {
+				.single-post__hero-image {
+					background-image:url('<?php echo wp_get_attachment_image_url( $img_id, 'fullsize' ); ?>');
+				}
+			}
+		</style>
+
+		<div class="single-post__hero-image col-s-12"></div>
 
 	</div>
 
