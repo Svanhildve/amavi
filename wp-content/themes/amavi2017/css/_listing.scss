@@ -59,15 +59,18 @@
 }
 
 
-
 .listing--grid {
 	.listing__teaser {
 		margin-top: calc-rem(18);
 	}
 
+	margin-bottom: calc-rem(40);
+}
+
+.listing__item {
+
 	.meta {
 		margin-bottom: calc-rem(10);
 	}
 
-	margin-bottom: calc-rem(40);
 }

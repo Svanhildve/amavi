@@ -6,6 +6,7 @@
 	font-weight: bold;
 	//background: grey;
 	//border-bottom: 1px grey solid;
+	z-index: 10;
 
 	a {
 		box-shadow: none;
@@ -25,6 +26,8 @@
 
 .header__logo {
 	line-height: 0;
+		z-index: 1;
+	//position: fixed;
 }
 
 .header__logo__svg {

@@ -1,4 +1,4 @@
-<div class="listing__item listing--grid col-s-12 col-m-6 col-ml-4">
+<div class="listing__item foo listing--grid col-s-12 col-m-6 col-ml-4">
 
 	<div class="listing__thumbnail">
 		<div class="listing__thumbnail-wrap">

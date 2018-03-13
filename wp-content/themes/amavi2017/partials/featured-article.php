@@ -1,8 +1,8 @@
-<div class="featured-article row wrapper">
+<div class="row wrapper">
 
-	<div class="col-s-12">
+	<div class="featured-article col-s-12">
 
-		<style>
+		<!--<style>
 			@media screen and (max-width: 1023px) {
 				.featured-article__image--<?php echo get_post_thumbnail_id(); ?> {
 					background-image:url('<?php echo wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium' ); ?>');
@@ -15,9 +15,19 @@
 					;
 				}
 			}
-		</style>
+		</style>-->
 
-		<div class="featured-article__image  featured-article__image--<?php echo get_post_thumbnail_id(); ?>">
+		<a href="<?php the_permalink(); ?>">
+
+			<div class="featured-article__thumbnail-wrap">
+
+				<div class="featured-article__thumbnail-image">
+
+					<?php echo wp_get_attachment_image( get_post_thumbnail_id(), 'large', false, array() ); ?>
+
+				</div>
+
+			</div>
 
 			<div class="featured-article__teaser row wrapper">
 
@@ -47,7 +57,7 @@
 
 			</div>
 
-		</div>
+		</a>
 
 	</div>
 
