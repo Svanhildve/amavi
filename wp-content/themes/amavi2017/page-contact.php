@@ -22,9 +22,9 @@
 
 				<div class="contact-page__hero">
 		
-					<div class="contact-page__content row wrapper">
+					<div class="row">
 
-						<div class="col-s-12">
+						<div class="col-s-12 contact-page__content">
 						
 							<h1 class="h1--page"><?php single_post_title( '' ); ?></h1>
 							<p class="lead">
