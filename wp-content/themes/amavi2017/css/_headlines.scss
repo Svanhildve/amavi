@@ -48,7 +48,7 @@ h2, .h2 {
 
 .h2--featured-large {
 	font-size: calc-rem(30);
-	line-height: calc-rem(28);
+	line-height: calc-rem(32);
 	text-transform: uppercase;
 	//font-weight: 900;
 	margin-top: calc-rem(10);
@@ -70,10 +70,6 @@ h2, .h2 {
 .h2--featured-medium {
 	font-size: calc-rem(30);
 	line-height: calc-rem(30);
-
-	a {
-		color: $white;
-	}
 
 	@media #{$breakpoint-md} {
 		font-size: calc-rem(40);

@@ -80,6 +80,17 @@
 
 	</script>
 
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/ScrollMagic.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.js"></script>
+
+
+
+		
+
+	
+
+
+
 <?php wp_head(); ?>
 
 </head>

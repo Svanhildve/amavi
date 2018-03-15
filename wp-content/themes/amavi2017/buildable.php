@@ -16,7 +16,25 @@ if( have_rows('single_blocks') ):
 
 					<div class="picture-wide col-s-12">
 
+						<div class="picture-wide__image-wrap">
+
 						<?php echo wp_get_attachment_image( $image['ID'], 'large', false, array( 'class' => 'picture-wide__image' ) ); ?>
+
+					
+						<script>
+							// init controller
+							var controller = new ScrollMagic.Controller();
+
+							// build scenes
+							new ScrollMagic.Scene({triggerElement: ".picture-wide", triggerHook: (0.9), reverse: (false)})
+											.setClassToggle(".picture-wide__image-wrap", "lazy-reveal-image") // add class toggle
+											//.addIndicators() // add indicators (requires plugin)
+											.addTo(controller);
+
+						</script>
+
+
+						</div>
 
 					</div>
 
@@ -81,7 +99,7 @@ if( have_rows('single_blocks') ):
 
 				<div class="row wrapper">
 
-					<div class="two-pictures">
+					<div class="two-pictures two-pictures--large-first">
 
 						<div class="two-pictures-one col-s-12 col-ml-8">
 
@@ -94,6 +112,31 @@ if( have_rows('single_blocks') ):
 							<?php echo wp_get_attachment_image( $smallimage['ID'], 'medium', false, array( 'class' => 'two-pictures__image' ) ); ?>
 
 						</div>
+
+
+						<script>
+							// init controller
+							var controller = new ScrollMagic.Controller();
+
+							// build scenes
+							new ScrollMagic.Scene({triggerElement: ".two-pictures--large-first", triggerHook: (0.9), reverse: (false)})
+											.setClassToggle(".two-pictures-one", "lazy-reveal-image") // add class toggle
+											//.addIndicators() // add indicators (requires plugin)
+											.addTo(controller);
+
+						</script>
+
+						<script>
+							// init controller
+							var controller = new ScrollMagic.Controller();
+
+							// build scenes
+							new ScrollMagic.Scene({triggerElement: ".two-pictures--large-first", triggerHook: (0.9), reverse: (false)})
+											.setClassToggle(".two-pictures-two", "lazy-reveal-image") // add class toggle
+											//.addIndicators() // add indicators (requires plugin)
+											.addTo(controller);
+
+						</script>
 
 					</div>
 
@@ -107,7 +150,7 @@ if( have_rows('single_blocks') ):
 
 				<div class="row wrapper">
 
-					<div class="two-pictures">
+					<div class="two-pictures two-pictures--small-first">
 
 						<div class="two-pictures-one col-s-12 col-ml-8">
 
@@ -120,6 +163,30 @@ if( have_rows('single_blocks') ):
 							<?php echo wp_get_attachment_image( $largeimage['ID'], 'medium', false, array( 'class' => 'two-pictures__image' ) ); ?>
 
 						</div>
+
+						<script>
+							// init controller
+							var controller = new ScrollMagic.Controller();
+
+							// build scenes
+							new ScrollMagic.Scene({triggerElement: ".two-pictures--small-first", triggerHook: (0.9), reverse: (false)})
+											.setClassToggle(".two-pictures-one", "lazy-reveal-image") // add class toggle
+											//.addIndicators() // add indicators (requires plugin)
+											.addTo(controller);
+
+						</script>
+
+						<script>
+							// init controller
+							var controller = new ScrollMagic.Controller();
+
+							// build scenes
+							new ScrollMagic.Scene({triggerElement: ".two-pictures--small-first", triggerHook: (0.9), reverse: (false)})
+											.setClassToggle(".two-pictures-two", "lazy-reveal-image") // add class toggle
+											//.addIndicators() // add indicators (requires plugin)
+											.addTo(controller);
+
+						</script>
 
 					</div>
 

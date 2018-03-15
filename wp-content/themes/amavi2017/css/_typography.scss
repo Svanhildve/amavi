@@ -45,12 +45,12 @@ p {
 
 .lead {
 	font-family: $display-type;
-	font-size: calc-rem(22);
-	line-height: calc-rem(30);
+	font-size: calc-rem(20);
+	line-height: calc-rem(28);
 
 	@media #{$breakpoint-md} {
-		font-size: calc-rem(24);
-		line-height: calc-rem(32);
+		font-size: calc-rem(22);
+		line-height: calc-rem(30);
 	}
 }
 

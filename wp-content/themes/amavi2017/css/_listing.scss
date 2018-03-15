@@ -74,3 +74,24 @@
 	}
 
 }
+
+
+// Animachooon
+
+.listing--grid {
+	opacity: 0;
+}
+
+.listing--grid.lazy-load-listing {
+	opacity: 1;
+	transition: 0.8s ease;
+}
+
+.listing--slat {
+	opacity: 0;
+}
+
+.listing--slat.lazy-load-listing {
+	opacity: 1;
+	transition: 0.8s ease;
+}
