@@ -795,48 +795,50 @@ input {
     .hamburger {
       display: none; } }
 
-.show-nav .header__nav:after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  background: #87D8D7;
-  opacity: 1;
-  z-index: 3; }
-.show-nav .header__nav li {
-  display: block; }
-.show-nav .header__nav__list {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 10;
-  font-size: 1.1111111111rem;
-  font-weight: 500; }
-  .show-nav .header__nav__list li {
-    padding: 0.4444444444rem 0; }
-  .show-nav .header__nav__list a {
-    color: #444444; }
-.show-nav .hamburger__line {
-  transition: background .2s .1s ease;
-  background: transparent; }
-  .show-nav .hamburger__line:before, .show-nav .hamburger__line:after {
-    transition: top .3s ease, transform .2s .2s ease;
+.show-nav {
+  overflow: hidden; }
+  .show-nav .header__nav:after {
+    content: '';
+    position: fixed;
     top: 0;
-    width: 22px; }
-  .show-nav .hamburger__line:before {
-    -webkit-transform: rotate3d(0, 0, 1, 45deg);
-    -ms-transform: rotate3d(0, 0, 1, 45deg);
-    transform: rotate3d(0, 0, 1, 45deg); }
-  .show-nav .hamburger__line:after {
-    -webkit-transform: rotate3d(0, 0, 1, -45deg);
-    -ms-transform: rotate3d(0, 0, 1, -45deg);
-    transform: rotate3d(0, 0, 1, -45deg); }
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: #ffffff;
+    opacity: 0.9;
+    z-index: 3; }
+  .show-nav .header__nav li {
+    display: block; }
+  .show-nav .header__nav__list {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    font-size: 1.1111111111rem;
+    font-weight: 500; }
+    .show-nav .header__nav__list li {
+      padding: 0.4444444444rem 0; }
+    .show-nav .header__nav__list a {
+      color: #444444; }
+  .show-nav .hamburger__line {
+    transition: background .2s .1s ease;
+    background: transparent; }
+    .show-nav .hamburger__line:before, .show-nav .hamburger__line:after {
+      transition: top .3s ease, transform .2s .2s ease;
+      top: 0;
+      width: 22px; }
+    .show-nav .hamburger__line:before {
+      -webkit-transform: rotate3d(0, 0, 1, 45deg);
+      -ms-transform: rotate3d(0, 0, 1, 45deg);
+      transform: rotate3d(0, 0, 1, 45deg); }
+    .show-nav .hamburger__line:after {
+      -webkit-transform: rotate3d(0, 0, 1, -45deg);
+      -ms-transform: rotate3d(0, 0, 1, -45deg);
+      transform: rotate3d(0, 0, 1, -45deg); }
 
 .hamburger__line {
   position: relative;
@@ -891,7 +893,6 @@ input {
   font-family: "Sofia pro", Futura, "Gill Sans", Sans-serif;
   line-height: 1.3333333333rem;
   width: 100%;
-  margin-top: 30PX;
   font-weight: 100;
   padding: 0px 15px 15px 15px; }
   .footer a, .footer a visited {
@@ -992,6 +993,49 @@ input {
 
 .standard-page__heading {
   text-align: center; }
+
+.standard-page {
+  font-size: 0.8888888889rem; }
+
+.contact-page .h1--page, .contact-page .h1--search {
+  margin-top: 0; }
+.contact-page a, .contact-page a visited {
+  color: #ffffff;
+  text-decoration: none;
+  background-repeat: repeat-x;
+  background-size: 2px .1em;
+  background-position: 0 1.4em;
+  background-image: linear-gradient(currentColor, currentColor);
+  display: inline-block; }
+  .contact-page a:hover, .contact-page a visited:hover {
+    background-size: 0; }
+
+.contact-page__hero {
+  margin-bottom: 15px;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  z-index: 0;
+  display: block;
+  height: calc(100vh - 104px); }
+  .contact-page__hero:after {
+    background-color: rgba(0, 0, 0, 0.3);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1; }
+
+.contact-page__content {
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%; }
 
 .search-intro {
   font-size: 0.8888888889rem;

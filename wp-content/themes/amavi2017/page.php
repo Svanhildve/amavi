@@ -21,16 +21,26 @@
 
 				<div class="standard-page__content row wrapper">
 
-					<div class="col-s-12 col-m-12">
+					<?php
 
-						<img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>" style="width: 100%;">
+					if ( has_post_thumbnail() ) { ?>
+					    
+						<div class="col-s-12 col-m-12">
 
-					</div>
+							<img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>">
+
+						</div>
+
+					<?php
+
+					}
+
+					?>
+
+					
 
 
 					<div class="col-s-12 col-m-offset-2 col-m-8">
-
-					
 
 					<?php the_content(''); ?>
 

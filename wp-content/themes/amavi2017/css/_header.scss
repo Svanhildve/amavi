@@ -141,6 +141,8 @@
 
 .show-nav {
 
+	overflow: hidden;
+
 	.header__nav {
 
 		&:after {
@@ -151,8 +153,8 @@
 			height: 100%;
 			width: 100%;
 			text-align: center;
-			background: $light-teal;
-			opacity: 1;
+			background: $white;
+			opacity: 0.9;
 			z-index: 3;
 		}
 
