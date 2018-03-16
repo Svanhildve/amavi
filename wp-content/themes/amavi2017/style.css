@@ -1679,7 +1679,7 @@ h1 {
     transition: all 1100ms cubic-bezier(0.23, 1, 0.32, 1); }
 
 .two-pictures--small-first .two-pictures-two.lazy-reveal-image:after {
-  transition-delay: 0.1s; }
+  transition-delay: 0.2s; }
 
 .two-pictures--large-first .two-pictures-two.lazy-reveal-image:after {
   transition-delay: 0.1s; }

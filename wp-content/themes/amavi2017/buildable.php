@@ -152,13 +152,13 @@ if( have_rows('single_blocks') ):
 
 					<div class="two-pictures two-pictures--small-first">
 
-						<div class="two-pictures-one col-s-12 col-ml-8">
+						<div class="two-pictures-two col-s-12 col-ml-4">
 
 							<?php echo wp_get_attachment_image( $smallimage['ID'], 'medium', false, array( 'class' => 'two-pictures__image' ) ); ?>
 
 						</div>
 
-						<div class="two-pictures-two col-s-12 col-ml-4">
+						<div class="two-pictures-one col-s-12 col-ml-8">
 
 							<?php echo wp_get_attachment_image( $largeimage['ID'], 'medium', false, array( 'class' => 'two-pictures__image' ) ); ?>
 
