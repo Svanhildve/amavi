@@ -2,28 +2,28 @@
 
 	<div class="featured-article col-s-12">
 
-		<!--<style>
+		<style>
 			@media screen and (max-width: 1023px) {
-				.featured-article__image--<?php echo get_post_thumbnail_id(); ?> {
+				#featured-article__image--<?php echo get_post_thumbnail_id(); ?> {
 					background-image:url('<?php echo wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium' ); ?>');
 				}
 			}
 			@media screen and (min-width: 1024px) {
-				.featured-article__image--<?php echo get_post_thumbnail_id(); ?> {
+				#featured-article__image--<?php echo get_post_thumbnail_id(); ?> {
 					background-image:url('<?php echo wp_get_attachment_image_url( get_post_thumbnail_id(), 'large' ); ?>');
 
 					;
 				}
 			}
-		</style>-->
+		</style>
 
 		<a href="<?php the_permalink(); ?>">
 
 			<div class="featured-article__thumbnail-wrap">
 
-				<div class="featured-article__thumbnail-image">
+				<div class="featured-article__thumbnail-image" id="featured-article__image--<?php echo get_post_thumbnail_id(); ?>">
 
-					<?php echo wp_get_attachment_image( get_post_thumbnail_id(), 'large', false, array() ); ?>
+
 
 				</div>
 
