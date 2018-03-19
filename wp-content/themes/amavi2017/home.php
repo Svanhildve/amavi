@@ -38,7 +38,13 @@ Template Name: Home
 				// Our featured post
 				} elseif ( $counter == $featured_post_position ) {
 
+					echo '</div>';
+					echo '<div class="row wrapper">';
+
 					get_template_part( 'partials/featured-article' );
+
+					echo '</div>';
+					echo '<div class="listing row wrapper">';
 
 				// The rest of the listing
 				} else {

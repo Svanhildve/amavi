@@ -1,4 +1,4 @@
-<div class="listing__item listing--slat row wrapper">
+<div class="listing__item listing--slat listing--slat--<?php echo get_the_ID(); ?> row wrapper">
 
 	<div class="listing__thumbnail col-s-12 col-pm-6 col-m-6 col-ml-5 col-l-4">
 		<div class="listing__thumbnail-wrap">
@@ -43,7 +43,7 @@
 	var controller = new ScrollMagic.Controller();
 
 	// build scenes
-	new ScrollMagic.Scene({triggerElement: ".listing--slat", triggerHook: (0.6), reverse: (false)})
+	new ScrollMagic.Scene({triggerElement: ".listing--slat--<?php echo get_the_ID(); ?>", triggerHook: (0.6), reverse: (false)})
 					.setClassToggle(".listing--slat", "lazy-load-listing") // add class toggle
 					//.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
