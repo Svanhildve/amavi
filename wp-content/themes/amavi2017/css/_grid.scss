@@ -2,6 +2,7 @@
 
 $col-number:				12;
 $grid-width:				100%;
+$grid-gutter-mobile:		10px;
 $grid-gutter:				14px;
 
 $breakpoint-sm:			"only screen and (max-width: 480px)";
@@ -36,6 +37,7 @@ $breakpoint-lg: 		"only screen and (min-width: 1170px)";
 	padding: $grid-gutter;
 //	background: #cdcdcd;
 //	border: 1px #000 solid;
+
 }
 
 @for $i from 1 through 12 {

@@ -40,13 +40,27 @@
 }
 
 .listing {
+	margin-bottom: calc-rem(14);
+
 	@media #{$breakpoint-md} {
+
+	}
+
+	@media #{$breakpoint-ml} {
 		margin-bottom: calc-rem(45);
 	}
 }
 
 .listing__item {
 	padding-bottom: calc-rem(10);
+
+	@media #{$breakpoint-palm} {
+		padding-bottom: 0;
+	}
+
+	@media #{$breakpoint-lg} {
+		padding-bottom: calc-rem(10);
+	}
 }
 
 .listing--empty {
@@ -88,6 +102,65 @@
 
 }
 
+// Grid test responsivt
+
+@media #{$breakpoint-palm} and (max-width: 1024px) {
+
+	.listing--grid {
+
+		.listing__teaser {
+			margin-top: 0;
+			width: 50%;
+			float: left;
+			padding-left: calc-rem(10);
+			padding-bottom: calc-rem(10);
+		}
+
+		.listing__thumbnail {
+
+			width: 50%;
+			padding-right: calc-rem(10);
+			padding-bottom: calc-rem(10);
+			float: left;
+
+		}
+
+	}
+
+	.listing--slat {
+
+		.listing__teaser {
+			padding-left: calc-rem(10);
+			padding-bottom: calc-rem(10);
+		}
+
+		.listing__thumbnail {
+			padding-right: calc-rem(10);
+			padding-bottom: calc-rem(10);
+		}
+
+	}
+
+}
+
+@media #{$breakpoint-md} {
+
+	.listing {
+
+		.listing__teaser {
+			padding-left: calc-rem(14);
+			padding-bottom: calc-rem(14);
+		}
+
+		.listing__thumbnail {
+			padding-right: calc-rem(14);
+			padding-bottom: calc-rem(14);
+		}
+
+	}
+
+}
+
 
 // Animachooon
 
@@ -107,4 +180,18 @@
 .listing__item--slat.lazy-load-listing {
 	opacity: 1;
 	transition: 0.8s ease;
+}
+
+// Category page
+
+.listing--category {
+
+	@media #{$breakpoint-ml} {
+		margin-bottom: calc-rem(10);
+	}
+
+	@media #{$breakpoint-lg} {
+		margin-bottom: calc-rem(45);
+	}
+
 }

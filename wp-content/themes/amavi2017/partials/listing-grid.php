@@ -1,4 +1,4 @@
-<div class="listing__item listing__item--grid  listing__item--grid--<?php echo get_the_ID(); ?> col-s-12 col-m-6 col-ml-4">
+<div class="listing__item listing__item--grid  listing__item--grid--<?php echo get_the_ID(); ?> col-s-12 col-ml-4">
 
 	<div class="listing__thumbnail">
 		<div class="listing__thumbnail-wrap">

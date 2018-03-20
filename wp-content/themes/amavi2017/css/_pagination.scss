@@ -1,11 +1,17 @@
 .pagination {
 	font-family: $display-type;
 	font-size: calc-rem(16);
-	text-align: right;
+	text-align: center;
+
+	@media #{$breakpoint-ml} {
+		text-align: right;
+	}
 }
 
 .pagination__body {
-	border-top: 1px $lightest-grey solid;
+	@media #{$breakpoint-ml} {
+		border-top: 1px $lightest-grey solid;
+	}
 }
 
 .pagination__next {

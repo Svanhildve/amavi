@@ -1,10 +1,39 @@
 .category-page {
-	padding-top: calc-rem(20);
+	margin-top: calc-rem(30);
+	margin-bottom: calc-rem(30);
+
+	@media #{$breakpoint-ml} {
+		margin-bottom: calc-rem(44);
+	}
+
+	@media #{$breakpoint-ml} {
+		margin-top: calc-rem(40);
+		margin-bottom: calc-rem(60);
+	}
+
+	@media #{$breakpoint-lg} {
+		margin-top: calc-rem(60);
+		margin-bottom: calc-rem(80);
+	}
 }
 
 .category-page__heading {
 	text-align: center;
-	border-bottom: 1px solid $lightest-grey;
+	
+
+	@media #{$breakpoint-palm} {
+		margin-bottom: calc-rem(10);
+	}
+
+	@media #{$breakpoint-ml} {
+		//margin-bottom: calc-rem(14);
+		border-bottom: 1px solid $lightest-grey;
+	}
+
+	@media #{$breakpoint-lg} {
+		//margin-bottom: calc-rem(24);
+		margin-bottom: calc-rem(45);
+	}
 }
 
 .category-page-label {

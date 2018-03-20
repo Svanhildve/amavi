@@ -9,7 +9,7 @@
 
 			</div>
 
-			<div class="listing">
+			<div class="listing listing--slat listing--category row wrapper">
 
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
