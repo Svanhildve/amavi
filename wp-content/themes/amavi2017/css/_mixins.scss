@@ -11,3 +11,18 @@
     	background-size: 0;
     }
 }
+
+@mixin teal-link-reversed {
+    color: #007175;
+    text-decoration: none;
+    background-repeat: repeat-x;
+    background-size: 0;
+    background-position: 0 1.4em;
+    background-image: linear-gradient(currentColor,currentColor);
+    display: inline-block;
+
+    &:hover {
+        background-size: 2px .1em;
+    }
+}
+    

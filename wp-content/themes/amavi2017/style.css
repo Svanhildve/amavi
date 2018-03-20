@@ -625,7 +625,7 @@ h1 a:hover, h1 a:active, h2 a:hover, h2 a:active, h3 a:hover, h3 a:active, h4 a:
     position: relative;
     float: right;
     left: 4px;
-    top: 12px;
+    top: 13px;
     transition: 0.18s ease-in; }
   .cta-link:after {
     content: '';
@@ -640,7 +640,7 @@ h1 a:hover, h1 a:active, h2 a:hover, h2 a:active, h3 a:hover, h3 a:active, h4 a:
     float: right;
     left: 19px;
     right: 0;
-    top: 9px;
+    top: 10px;
     transform: rotate(45deg);
     transition: 0.18s ease-in; }
   .cta-link:hover {
@@ -924,16 +924,7 @@ input {
       padding: 3.3333333333rem 0; } }
 
 .footer__nav a {
-  color: #ffffff;
-  text-decoration: none;
-  background-repeat: repeat-x;
-  background-size: 2px .1em;
-  background-position: 0 1.4em;
-  background-image: linear-gradient(currentColor, currentColor);
-  display: inline-block;
   margin-right: 20px; }
-  .footer__nav a:hover {
-    background-size: 0; }
 
 /* .footer {
 	//background-color: $blue-zodiac;
@@ -960,7 +951,16 @@ input {
   background: none; }
 
 .facebook {
-  display: inline; }
+  display: inline;
+  color: #ffffff;
+  text-decoration: none;
+  background-repeat: repeat-x;
+  background-size: 2px .1em;
+  background-position: 0 1.4em;
+  background-image: linear-gradient(currentColor, currentColor);
+  display: inline-block; }
+  .facebook:hover {
+    background-size: 0; }
 
 .facebook-icon {
   position: relative;
@@ -988,6 +988,11 @@ input {
   line-height: 1.3333333333rem; }
   .single-post__content p:last-of-type {
     margin-bottom: 0; }
+
+.single-post__content a {
+  text-decoration: underline; }
+  .single-post__content a:hover {
+    text-decoration: none; }
 
 .category-page {
   margin-top: 1.6666666667rem;
@@ -1121,6 +1126,17 @@ input {
   vertical-align: middle;
   position: relative;
   margin-right: 0.2777777778rem; }
+
+.meta a {
+  color: #007175;
+  text-decoration: none;
+  background-repeat: repeat-x;
+  background-size: 0;
+  background-position: 0 1.4em;
+  background-image: linear-gradient(currentColor, currentColor);
+  display: inline-block; }
+  .meta a:hover {
+    background-size: 2px .1em; }
 
 .listing__thumbnail {
   display: block;

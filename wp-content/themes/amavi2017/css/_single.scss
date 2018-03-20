@@ -18,3 +18,11 @@
 		margin-bottom: 0;
 	}
 }
+
+.single-post__content a {
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
