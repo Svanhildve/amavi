@@ -13,7 +13,7 @@ Template Name: Home
 
 	?>
 
-	<div class="listing  row  wrapper">
+	<div class="listing listing--grid row  wrapper">
 
 		<?php
 
@@ -44,7 +44,7 @@ Template Name: Home
 					get_template_part( 'partials/featured-article' );
 
 					echo '</div>';
-					echo '<div class="listing row wrapper">';
+					echo '<div class="listing listing--slat row wrapper">';
 
 				// The rest of the listing
 				} else {

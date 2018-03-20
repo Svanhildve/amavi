@@ -78,11 +78,22 @@
 
 .featured-hero {
 	position: relative;
+	margin-bottom: calc-rem(20);
 
-	@media #{$breakpoint-md} {
+	@media #{$breakpoint-ml} {
 
 		.excerpt {
 			padding-right: 120px;
+		}
+
+		margin-bottom: calc-rem(50);
+
+	}
+
+	@media #{$breakpoint-lg} {
+
+		.excerpt {
+			margin-bottom: calc-rem(30);
 		}
 
 	}

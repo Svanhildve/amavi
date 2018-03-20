@@ -40,10 +40,8 @@
 }
 
 .listing {
-	margin-bottom: calc-rem(45);
-
 	@media #{$breakpoint-md} {
-		margin-top: calc-rem(55);
+		margin-bottom: calc-rem(45);
 	}
 }
 
@@ -63,8 +61,23 @@
 	.listing__teaser {
 		margin-top: calc-rem(18);
 	}
+}
 
-	margin-bottom: calc-rem(40);
+.listing--slat {
+	.listing__teaser {
+		padding-top: calc-rem(4);
+		padding-bottom: calc-rem(0);
+	}
+
+	@media #{$breakpoint-palm} {
+
+		.listing__teaser {
+			padding-top: calc-rem(14);
+			padding-bottom: calc-rem(14);
+		}
+
+	}
+
 }
 
 .listing__item {
@@ -78,20 +91,20 @@
 
 // Animachooon
 
-.listing--grid {
+.listing__item--grid {
 	opacity: 0;
 }
 
-.listing--grid.lazy-load-listing {
+.listing__item--grid.lazy-load-listing {
 	opacity: 1;
 	transition: 0.8s ease;
 }
 
-.listing--slat {
+.listing__item--slat {
 	opacity: 0;
 }
 
-.listing--slat.lazy-load-listing {
+.listing__item--slat.lazy-load-listing {
 	opacity: 1;
 	transition: 0.8s ease;
 }

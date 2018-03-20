@@ -1,4 +1,4 @@
-<div class="listing__item listing--grid  listing--grid--<?php echo get_the_ID(); ?> col-s-12 col-m-6 col-ml-4">
+<div class="listing__item listing__item--grid  listing__item--grid--<?php echo get_the_ID(); ?> col-s-12 col-m-6 col-ml-4">
 
 	<div class="listing__thumbnail">
 		<div class="listing__thumbnail-wrap">
@@ -42,8 +42,8 @@
 	var controller = new ScrollMagic.Controller();
 
 	// build scenes
-	new ScrollMagic.Scene({triggerElement: ".listing--grid--<?php echo get_the_ID(); ?>", triggerHook: (1), reverse: (false)})
-					.setClassToggle(".listing--grid", "lazy-load-listing") // add class toggle
+	new ScrollMagic.Scene({triggerElement: ".listing__item--grid--<?php echo get_the_ID(); ?>", triggerHook: (1), reverse: (false)})
+					.setClassToggle(".listing__item--grid", "lazy-load-listing") // add class toggle
 					//.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
 
