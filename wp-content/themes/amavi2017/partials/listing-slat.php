@@ -43,7 +43,7 @@
 	var controller = new ScrollMagic.Controller();
 
 	// build scenes
-	new ScrollMagic.Scene({triggerElement: ".listing--slat--<?php echo get_the_ID(); ?>", triggerHook: (0.6), reverse: (false)})
+	new ScrollMagic.Scene({triggerElement: ".listing--slat--<?php echo get_the_ID(); ?>", triggerHook: (1), reverse: (false)})
 					.setClassToggle(".listing--slat", "lazy-load-listing") // add class toggle
 					//.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);

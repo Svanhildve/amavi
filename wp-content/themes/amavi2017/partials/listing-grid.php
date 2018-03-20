@@ -42,7 +42,7 @@
 	var controller = new ScrollMagic.Controller();
 
 	// build scenes
-	new ScrollMagic.Scene({triggerElement: ".listing--grid--<?php echo get_the_ID(); ?>", triggerHook: (0.9), reverse: (false)})
+	new ScrollMagic.Scene({triggerElement: ".listing--grid--<?php echo get_the_ID(); ?>", triggerHook: (1), reverse: (false)})
 					.setClassToggle(".listing--grid", "lazy-load-listing") // add class toggle
 					//.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
