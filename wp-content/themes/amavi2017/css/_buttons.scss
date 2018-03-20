@@ -15,13 +15,11 @@
 		background: darken(#7FDEDD, 10%);
 		color: $black;
 		transition: background .1s;
-
 	}
 
 	&:focus {
 		box-shadow: inset 0 0 0 calc-rem(3) darken(#7FDEDD, 20%);
         outline: 0;
-		
 	}
 
 }

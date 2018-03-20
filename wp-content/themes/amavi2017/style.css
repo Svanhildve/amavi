@@ -1029,6 +1029,11 @@ input {
 .standard-page {
   font-size: 0.8888888889rem; }
 
+.standard-page a {
+  text-decoration: underline; }
+  .standard-page a:hover {
+    text-decoration: none; }
+
 .contact-page .h1--page, .contact-page .h1--search {
   margin-top: 0; }
 .contact-page a, .contact-page a visited {

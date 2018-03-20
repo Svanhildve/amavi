@@ -6,6 +6,14 @@
 	font-size: calc-rem(16);
 }
 
+.standard-page a {
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 .contact-page {
 
 	.h1--page {
