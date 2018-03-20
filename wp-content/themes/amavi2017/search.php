@@ -52,7 +52,7 @@
 
 <!-- LIMT INN -->
 
-			<div class="listing">
+			<div class="listing listing--slat row wrapper">
 
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 

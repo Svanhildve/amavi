@@ -13,5 +13,9 @@
 .single-post__content {
 	font-size: calc-rem(16);
 	line-height: calc-rem(24);
-	margin-bottom: calc-rem(100);
+	margin-bottom: calc-rem(30);
+
+	@media #{$breakpoint-md} {
+		margin-bottom: calc-rem(60);
+	}
 }

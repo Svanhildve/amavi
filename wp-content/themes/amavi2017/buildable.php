@@ -14,7 +14,7 @@ if( have_rows('single_blocks') ):
 
 				<div class="row wrapper">
 
-					<div class="picture-wide col-s-12">
+					<div class="picture-wide col-s-12 block">
 
 						<div class="picture-wide__image-wrap">
 
@@ -49,7 +49,7 @@ if( have_rows('single_blocks') ):
 
 			if ( $content ) { ?>
 
-				<div class="row">
+				<div class="row block">
 
 					<div class="single-post__article col-s-12 col-ml-8 col-ml-offset-2">
 
@@ -69,7 +69,7 @@ if( have_rows('single_blocks') ):
 
 			if ( $blockquote ) { ?>
 
-				<div class="row">
+				<div class="row block">
 
 					<div class="blockquote col-s-12 col-ml-10 col-ml-offset-1">
 
@@ -97,7 +97,7 @@ if( have_rows('single_blocks') ):
 			if ( $largeimage && $smallimage && $largeleft ) { ?>
 
 
-				<div class="row wrapper">
+				<div class="row wrapper block">
 
 					<div class="two-pictures two-pictures--large-first">
 
@@ -148,7 +148,7 @@ if( have_rows('single_blocks') ):
 			if ( $largeimage && $smallimage && $largeright ) { ?>
 
 
-				<div class="row wrapper">
+				<div class="row wrapper block">
 
 					<div class="two-pictures two-pictures--small-first">
 

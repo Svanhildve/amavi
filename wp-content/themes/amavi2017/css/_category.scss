@@ -3,12 +3,8 @@
 	margin-bottom: calc-rem(30);
 
 	@media #{$breakpoint-ml} {
-		margin-bottom: calc-rem(44);
-	}
-
-	@media #{$breakpoint-ml} {
 		margin-top: calc-rem(40);
-		margin-bottom: calc-rem(60);
+		margin-bottom: calc-rem(40);
 	}
 
 	@media #{$breakpoint-lg} {

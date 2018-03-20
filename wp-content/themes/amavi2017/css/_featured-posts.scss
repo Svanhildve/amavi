@@ -3,11 +3,16 @@
 }
 
 .featured-posts {
-	margin-bottom: calc-rem(100);
+	margin-bottom: calc-rem(20);
+
+	@media #{$breakpoint-palm} {
+		margin-bottom: calc-rem(50);
+	}
 }
 
 .featured-posts__headline {
-
+	margin-top: 0;
+	margin-bottom: 0;
 	font-size: calc-rem(14);
 	font-family: $display-type;
 	margin-bottom: calc-rem(5);

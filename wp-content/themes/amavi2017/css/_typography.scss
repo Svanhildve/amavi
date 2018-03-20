@@ -24,6 +24,14 @@ blockquote {
 	}
 }
 
+.blockquote {
+
+	@media #{$breakpoint-md} {
+		margin-top: calc-rem(15);
+		margin-bottom: calc-rem(15);
+	}
+}
+
 .blockquote p {
 	font-family: $display-type;
 	font-size: calc-rem(26);

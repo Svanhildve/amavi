@@ -13,4 +13,8 @@
 .single-post__content {
 	font-size: calc-rem(16);
 	line-height: calc-rem(24);
+
+	p:last-of-type {
+		margin-bottom: 0;
+	}
 }

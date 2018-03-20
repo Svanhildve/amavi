@@ -88,7 +88,7 @@
 			<h2 class="featured-posts__headline">Further reading</h2>
 		</div>
 
-		<div class="listing">
+		<div class="listing listing--grid">
 
 		<?php
 

@@ -2,17 +2,40 @@
 	width: 100%;
 }
 
-
 .two-pictures {
 
 	@media #{$breakpoint-md} {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		margin: 15px 0;
 	}
 	
 }
 
+@media only screen and (max-width: 768px) {
+
+.two-pictures--large-first {
+	.two-pictures-one {
+		padding-bottom: 6px;
+	}
+
+	.two-pictures-two {
+		padding-top: 0;
+	}
+}
+
+.two-pictures--small-first {
+	.two-pictures-two {
+		padding-bottom: 6px;
+	}
+
+	.two-pictures-one {
+		padding-top: 0;
+	}
+}
+
+}
 
 
 /* @media #{$breakpoint-md} {
