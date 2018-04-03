@@ -30,6 +30,8 @@
 
 			<div class="featured-article__teaser row wrapper">
 
+				<a class="featured-article__link" href="<?php the_permalink(); ?>"></a>
+
 				<div class="col-pm-offset-1 col-m-offset-3 col-s-12 col-pm-10 col-m-6 featured-article__teaser-body">
 
 					<div class="meta">
@@ -48,9 +50,13 @@
 
 					</div>
 
-					<h2 class="h2 h2--featured-medium"><?php the_title(); ?></h2>
+					<a href="<?php the_permalink(); ?>">
 
-					<div class="excerpt"><?php the_excerpt(); ?></div>
+						<h2 class="h2 h2--featured-medium"><?php the_title(); ?></h2>
+
+						<div class="excerpt"><?php the_excerpt(); ?></div>
+
+					</a>
 
 				</div>
 
